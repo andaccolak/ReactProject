@@ -1,13 +1,14 @@
 import './App.css'
 import { useEffect, useState } from 'react'
-
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify';
 import PageContainer from './container/PageContainer'
 import Header from './components/Header'
 import RouterConfig from './config/RouterConfig'
 import Loading from './components/Loading'
 import Drawer from '@mui/material/Drawer';
 import { useDispatch, useSelector } from 'react-redux'
-import { calculateBasket, setDrawer,removeProduct } from './redux/slices/basketSlice.jsx'
+import { calculateBasket, setDrawer, removeProduct } from './redux/slices/basketSlice.jsx'
 
 function App() {
 
@@ -16,17 +17,18 @@ function App() {
 
   useEffect(() => {
     dispatch(calculateBasket());
-}, [products]); 
+  }, [products]);
 
   return (
-    
-      <div>
-        
-       <PageContainer>
-        <Loading/>
-       <Header/>
-        <RouterConfig/>
-        <Drawer onClose={()=>dispatch(setDrawer())} className='drawer' sx={{ padding: '20px' }} anchor='right' open={drawer} >
+
+    <div>
+
+      <PageContainer>
+        <Loading />
+        <Header />
+        <RouterConfig />
+        <ToastContainer autoClose={2500} />
+        <Drawer onClose={() => dispatch(setDrawer())} className='drawer' sx={{ padding: '20px' }} anchor='right' open={drawer} >
           {
             products && products.map((product) => {
               return (
@@ -47,9 +49,9 @@ function App() {
             <p style={{ textAlign: 'center' }}> toplam tutar : {totalAmount}</p>
           </div>
         </Drawer>
-       </PageContainer>
-      </div>
-      
+      </PageContainer>
+    </div>
+
   )
 }
 

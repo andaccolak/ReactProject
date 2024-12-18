@@ -1,10 +1,11 @@
-.logo{
+.logo {
     width: 60px;
     height: 60px;
     padding-left: 100px;
     cursor: pointer;
 }
-.navbar{
+
+.navbar {
     background-color: #7e82b5;
     border-radius: 10px;
     width: 80%;
@@ -16,17 +17,20 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.navbar-link{
+
+.navbar-link {
     text-decoration: none;
     color: white;
     padding: 0 20px;
     cursor: pointer;
 }
-.flex-row-navbar{
+
+.flex-row-navbar {
     display: flex;
     flex-direction: row;
-   
-  }
+
+}
+
 .navbar-icons {
     display: flex;
     gap: 15px;
@@ -36,7 +40,7 @@
     flex-wrap: nowrap;
 }
 
-.navbar-input{
+.navbar-input {
     border: none;
     border-radius: 5px solid lightgray;
     padding: 5px;
@@ -51,17 +55,16 @@
         padding: 10px;
         gap: 10px;
     }
-    
+
     .navbar-input {
         width: 120px;
     }
-    
+
     .logo {
         padding-left: 20px;
     }
-    
+
     .navbar-link {
         padding: 0 10px;
     }
 }
-

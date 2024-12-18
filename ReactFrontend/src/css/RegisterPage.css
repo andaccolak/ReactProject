@@ -1,0 +1,24 @@
+.register {
+    height: 100vh;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-div {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px lightgrey;
+    margin-top: 5px;
+}
