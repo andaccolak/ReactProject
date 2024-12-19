@@ -7,7 +7,6 @@ import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setDrawer } from '../redux/slices/basketSlice';
-import { RiDropdownList } from 'react-icons/ri';
 
 
 function Header() {
