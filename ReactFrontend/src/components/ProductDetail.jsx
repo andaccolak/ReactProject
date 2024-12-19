@@ -74,7 +74,6 @@ function ProductDetail() {
 
   
   if (!selectedProduct) return <div>Loading...</div>;
-
   return (
     <div className="product-card">
       <div className="product-image-wrapper">

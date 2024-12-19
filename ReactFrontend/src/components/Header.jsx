@@ -25,8 +25,8 @@ function Header() {
             </div>
             <div className='navbar flex-row-navbar'>
                 <div className='navbar-links flex-row'>
-                    <p className='navbar-link'>Anasayfa</p>
-                    <p className='navbar-link'>Ürünler</p>
+                    <p onClick={() => navigate("/")} className='navbar-link'>Anasayfa</p>
+                    <p onClick={() => navigate("/products")} className='navbar-link'>Ürünler</p>
                     <p className='navbar-link'>Kategoriler</p>
                     <p className='navbar-link'>Hakkımızda</p>
                     <p className='navbar-link'>İletişim</p>

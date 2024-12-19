@@ -11,7 +11,7 @@ function ProductList() {
   const dispatch = useDispatch();
   const { products, loading } = useSelector((state) => state.product);
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 12;
+  const productsPerPage = 8;
 
   useEffect(() => {
     dispatch(getAllProduct());
@@ -34,9 +34,11 @@ function ProductList() {
 
         <p className="product-list-description">
           Lorem
-        </p><p className="product-list-description">
+        </p>
+        <p className="product-list-description">
           Lorem
-        </p><p className="product-list-description">
+        </p>
+        <p className="product-list-description">
           Lorem
         </p>
 
