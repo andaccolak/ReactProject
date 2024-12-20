@@ -7,7 +7,7 @@ import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setDrawer } from '../redux/slices/basketSlice';
-import { FaRegArrowAltCircleDown } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 
 
 function Header() {
@@ -21,17 +21,19 @@ function Header() {
     return (
         <div>
             <div onClick={() => navigate("/")}>
-                <img className='logo' src="./src/images/logo.png" />
+                <img className='logo' src="./src/images/ep.png" />
             </div>
             <div className='navbar flex-row-navbar'>
                 <div className='navbar-links flex-row'>
+
                     <p onClick={() => navigate("/")} className='navbar-link'>Anasayfa</p>
                     <p onClick={() => navigate("/products")} className='navbar-link'>Ürünler</p>
 
 
                     <div class="nav-item dropdown">
                         <a className="navbar-link dropdown-toggle" data-bs-toggle="dropdown">
-                            Kategoriler <FaRegArrowAltCircleDown style={{ position: 'relative', top: '2px' }} />
+                            Kategoriler <FaArrowDown
+                                style={{ position: 'relative', top: '2px' }} />
                         </a>
 
                         <div class="dropdown-menu">
