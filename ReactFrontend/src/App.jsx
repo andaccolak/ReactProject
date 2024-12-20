@@ -9,6 +9,7 @@ import Loading from './components/Loading'
 import Drawer from '@mui/material/Drawer';
 import { useDispatch, useSelector } from 'react-redux'
 import { calculateBasket, setDrawer, removeProduct } from './redux/slices/basketSlice.jsx'
+import Footer from './components/Footer.jsx';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
             <p style={{ textAlign: 'center' }}> toplam tutar : {totalAmount}</p>
           </div>
         </Drawer>
+        <Footer />
       </PageContainer>
     </div>
 

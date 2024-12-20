@@ -24,18 +24,18 @@ function Product({ product }) {
   }, [id]);
 
   return (
-    <div className="card" onClick={()=>navigate(`/product-detail/${id}`)}>
+    <div className="card" onClick={() => navigate(`/product-detail/${id}`)}>
       <img className='image' src={image} alt="" />
-            <div>
-                <p style={{ textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif' }}>{shortTitle}</p>
-                <h3 style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif' }}>{price}₺</h3>
-            </div>
+      <div>
+        <p style={{ textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif' }}>{shortTitle}</p>
+        <h3 className='card-price'>{price} ₺ / Kg</h3>
+      </div>
 
-            <div className='flex-row'>
-                <button onClick={() => navigate("/product-details/" + id)} className='detail-button'>Detayına Git</button>
-            </div>
-     </div>
-        
+      <div className='flex-row'>
+        <button onClick={() => navigate("/product-details/" + id)} className='detail-button'>Detayına Git</button>
+      </div>
+    </div>
+
   );
 }
 

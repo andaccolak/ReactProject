@@ -1,0 +1,33 @@
+.footer-container {
+    background-color: #7e82b5;
+    color: #fff;
+    text-align: center;
+    margin: 30px 30px 30px 39px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.footer-info {
+    width: 33%;
+    height: 300px;
+}
+
+.footer-acc {
+    width: 33%;
+    height: 300px;
+
+}
+
+.footer-contact {
+    width: 200px;
+    width: 33%;
+    height: 300px;
+
+}
+
+.link {
+    display: flex;
+    margin: 30px;
+    cursor: pointer;
+}

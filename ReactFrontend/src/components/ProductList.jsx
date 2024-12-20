@@ -52,7 +52,7 @@ function ProductList() {
 
       <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
-          <button
+          <button style={{ cursor: 'pointer', padding: '5px', margin: '5px', borderRadius: '15px', border: 'none', backgroundColor: 'lightgray', fontSize: '15px' }}
             key={index + 1}
             onClick={() => handlePageChange(index + 1)}
             className={currentPage === index + 1 ? 'active' : ''}

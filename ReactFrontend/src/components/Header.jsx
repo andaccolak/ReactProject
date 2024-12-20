@@ -7,6 +7,7 @@ import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setDrawer } from '../redux/slices/basketSlice';
+import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
 
 function Header() {
@@ -26,7 +27,22 @@ function Header() {
                 <div className='navbar-links flex-row'>
                     <p onClick={() => navigate("/")} className='navbar-link'>Anasayfa</p>
                     <p onClick={() => navigate("/products")} className='navbar-link'>Ürünler</p>
-                    <p className='navbar-link'>Kategoriler</p>
+
+
+                    <div class="nav-item dropdown">
+                        <a className="navbar-link dropdown-toggle" data-bs-toggle="dropdown">
+                            Kategoriler <FaRegArrowAltCircleDown style={{ position: 'relative', top: '2px' }} />
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a href="cart.html" class="dropdown-item">Cart</a>
+                            <a href="chackout.html" class="dropdown-item">Chackout</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+
+
                     <p className='navbar-link'>Hakkımızda</p>
                     <p className='navbar-link'>İletişim</p>
                 </div>
