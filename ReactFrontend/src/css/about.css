@@ -1,0 +1,122 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 50px;
+}
+
+.about-page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b6e0;
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-us {
+    width: 100%;
+    height: 300px;
+    background-color: #7e82b5;
+    border-radius: 10px;
+}
+
+.our-goal {
+    width: 100%;
+    height: 300px;
+    background-color: #7e82b5;
+    border-radius: 10px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    margin-top: 30px;
+    background-color: #7e82b5;
+    border-radius: 10px;
+}
+
+.goal {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    background-color: #7e82b5;
+    border-radius: 10px;
+}
+
+.about-us-title {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.goal-title {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-us-text {
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 200px;
+    margin: 25px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    ;
+}
+
+.goal-text {
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 200px;
+    margin: 25px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: white;
+    width: 120px;
+    margin-top: 30px;
+    height: 100px;
+    border-radius: 20%;
+    background: #b2b6e0;
+}
+
+.icon-text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}

@@ -5,6 +5,8 @@ import ProductDetail from '../components/ProductDetail';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import ProductsPage from '../pages/ProductsPage';
+import AboutPage from '../pages/AboutPage';
+import ContactPage from '../pages/ContactPage';
 
 const RouterConfig = () => {
   return (
@@ -14,6 +16,10 @@ const RouterConfig = () => {
       <Route path='/login' element={<LoginPage />} />
       <Route path='/register' element={<RegisterPage />} />
       <Route path='/products' element={<ProductsPage />} />
+      <Route path='/About' element={<AboutPage />} />
+      <Route path='/Contact' element={<ContactPage />} />
+
+
     </Routes>
   );
 };

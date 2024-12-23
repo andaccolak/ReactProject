@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom';
 import { setDrawer } from '../redux/slices/basketSlice';
 import { FaArrowDown } from "react-icons/fa";
 
-
 function Header() {
     const dispatch = useDispatch();
     const { products } = useSelector((store) => store.basket)
@@ -37,16 +36,16 @@ function Header() {
                         </a>
 
                         <div class="dropdown-menu">
-                            <a href="cart.html" class="dropdown-item">Cart</a>
-                            <a href="chackout.html" class="dropdown-item">Chackout</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
+                            <a class="dropdown-item">Kategori1</a>
+                            <a class="dropdown-item">Kategori2</a>
+                            <a class="dropdown-item">Kategori2</a>
+                            <a class="dropdown-item">Kategori2</a>
                         </div>
                     </div>
 
 
-                    <p className='navbar-link'>Hakkımızda</p>
-                    <p className='navbar-link'>İletişim</p>
+                    <p onClick={() => navigate("/About")} className='navbar-link'>Hakkımızda</p>
+                    <p onClick={() => navigate("/Contact")} className='navbar-link'>İletişim</p>
                 </div>
                 <div className='navbar-icons'>
                     <input className='navbar-input' style={{ borderRadius: '5px' }} type="text" placeholder='Ara...' name="" id="" /> <GoSearch />
