@@ -11,7 +11,7 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20241224124551_mig1")]
+    [Migration("20241224140708_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
@@ -109,7 +109,7 @@ namespace Persistence.Migrations
                     b.Property<int>("Sales")
                         .HasColumnType("int");
 
-                    b.Property<string>("Type")
+                    b.Property<string>("SalesType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -16,3 +16,5 @@ C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Infastructure
 C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Infastructure\Persistence\obj\Debug\net8.0\Persistence.pdb
 C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Infastructure\Persistence\obj\Debug\net8.0\Persistence.genruntimeconfig.cache
 C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Infastructure\Persistence\obj\Debug\net8.0\ref\Persistence.dll
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Infastructure\Persistence\bin\Debug\net8.0\Application.dll
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Infastructure\Persistence\bin\Debug\net8.0\Application.pdb

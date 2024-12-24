@@ -106,7 +106,7 @@ namespace Persistence.Migrations
                     b.Property<int>("Sales")
                         .HasColumnType("int");
 
-                    b.Property<string>("Type")
+                    b.Property<string>("SalesType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

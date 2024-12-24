@@ -52,7 +52,7 @@ namespace Persistence.Migrations
                     CategoryID = table.Column<int>(type: "int", nullable: false),
                     CategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SalesType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Sales = table.Column<int>(type: "int", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false)
                 },

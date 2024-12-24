@@ -16,7 +16,7 @@ namespace Domain.Entities
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
         public string Brand { get; set; }
-        public string Type { get; set; }
+        public string SalesType { get; set; }
         public int Sales { get; set; }
         public int Quantity { get; set; }
     }
