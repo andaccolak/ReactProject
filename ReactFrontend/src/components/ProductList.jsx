@@ -17,7 +17,6 @@ function ProductList() {
     dispatch(getAllProduct());
   }, [dispatch]);
 
-
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
@@ -31,25 +30,15 @@ function ProductList() {
     <div className="product-list">
       <div className="product-list-container">
         <h1 className="product-list-heading">Ürünlerimiz</h1>
-
-        <p className="product-list-description">
-          Lorem
-        </p>
-        <p className="product-list-description">
-          Lorem
-        </p>
-        <p className="product-list-description">
-          Lorem
-        </p>
-
+        <p className="product-list-description">Lorem</p>
+        <p className="product-list-description">Lorem</p>
+        <p className="product-list-description">Lorem</p>
       </div>
       <div className='flex-row' style={{ flexWrap: 'wrap', marginTop: '25px' }}>
         {currentProducts.map((product) => (
-          <Product key={product.id} product={product} />
+          <Product key={product.productID} product={product} />
         ))}
       </div>
-
-
       <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
           <button style={{ cursor: 'pointer', padding: '5px', margin: '5px', borderRadius: '15px', border: 'none', backgroundColor: 'lightgray', fontSize: '15px' }}

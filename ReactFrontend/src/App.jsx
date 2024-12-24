@@ -33,12 +33,12 @@ function App() {
           {
             products && products.map((product) => {
               return (
-                <div key={product.id}>
+                <div key={product.productID}>
                   <div className='flex-row' style={{ padding: '20px' }}>
                     <img style={{ marginRight: '5px' }} src={product.image} width={50} height={50} />
-                    <p style={{ width: '320px', marginRight: '5px' }}>{product.title}({product.count})</p>
+                    <p style={{ width: '320px', marginRight: '5px' }}>{product.productName}({product.count})</p>
                     <p style={{ fontWeight: 'bold', marginRight: '10px', width: '60px' }}>{product.price}TL</p>
-                    <button onClick={() => dispatch(removeProduct({ id: product.id }))} style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'rgb(185, 76, 76)', border: 'none', color: '#fff', width: '50px' }}>sil</button>
+                    <button onClick={() => dispatch(removeProduct({ productID: product.productID }))} style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'rgb(185, 76, 76)', border: 'none', color: '#fff', width: '50px' }}>sil</button>
                   </div>
 
 

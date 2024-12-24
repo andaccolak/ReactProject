@@ -28,21 +28,19 @@ function Header() {
                     <p onClick={() => navigate("/")} className='navbar-link'>Anasayfa</p>
                     <p onClick={() => navigate("/products")} className='navbar-link'>Ürünler</p>
 
-
-                    <div class="nav-item dropdown">
+                    <div className="nav-item dropdown">
                         <a className="navbar-link dropdown-toggle" data-bs-toggle="dropdown">
                             Kategoriler <FaArrowDown
                                 style={{ position: 'relative', top: '2px' }} />
                         </a>
 
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item">Kategori1</a>
-                            <a class="dropdown-item">Kategori2</a>
-                            <a class="dropdown-item">Kategori2</a>
-                            <a class="dropdown-item">Kategori2</a>
+                        <div className="dropdown-menu">
+                            <a className="dropdown-item">Kategori1</a>
+                            <a className="dropdown-item">Kategori2</a>
+                            <a className="dropdown-item">Kategori2</a>
+                            <a className="dropdown-item">Kategori2</a>
                         </div>
                     </div>
-
 
                     <p onClick={() => navigate("/About")} className='navbar-link'>Hakkımızda</p>
                     <p onClick={() => navigate("/Contact")} className='navbar-link'>İletişim</p>
