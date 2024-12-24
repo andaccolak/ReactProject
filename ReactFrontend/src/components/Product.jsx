@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/product.css';
 import '../app.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { data, useNavigate, useParams } from 'react-router-dom';
 
 function Product({ product }) {
   const { id, price, image, title } = product;
@@ -22,9 +22,10 @@ function Product({ product }) {
   useEffect(() => {
     getProductById();
   }, [id]);
-
   return (
-    <div className="card" onClick={() => navigate(`/product-detail/${id}`)}>
+    <div className="card" onClick={() => {
+      navigate(`/product-detail/${id}`);
+    }}>
       <img className='image' src={image} alt="" />
       <div>
         <p style={{ textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif' }}>{shortTitle}</p>

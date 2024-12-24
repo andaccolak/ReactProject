@@ -33,7 +33,7 @@ function ProductDetail() {
     }
   };
 
-  
+
   // Ürünü API'den Getirme Fonksiyonu
   const getProductById = async () => {
     try {
@@ -71,8 +71,6 @@ function ProductDetail() {
     }
   }, [basketProduct]);
 
-
-  
   if (!selectedProduct) return <div>Loading...</div>;
   return (
     <div className="product-card">
