@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProduct } from '../redux/slices/productSlice';
 import { FaSortAmountDown } from "react-icons/fa";
+import Category from '../components/Category';
 
 function ProductsPage() {
     const dispatch = useDispatch();
@@ -25,22 +26,14 @@ function ProductsPage() {
         setCurrentPage(pageNumber);
     };
     return (
+
+
         <div>
             <h1 className='product-page-title'>Ürünlerimiz</h1>
             <div className='product-page'>
                 <div className='sort-filter'>
-                    <div style={{ marginLeft: '50px', color: '#7e82b5', fontSize: '30px' }}>
-                        <FaSortAmountDown />
-                    </div>
-
                     <div>
-                        <p className='Category'>Kategori1</p>
-                        <p className='Category'>Kategori2</p>
-                        <p className='Category'>Kategori3</p>
-                        <p className='Category'>Kategori4</p>
-                        <p className='Category'>Kategori5</p>
-
-
+                        <Category />
                     </div>
                 </div>
                 <div className='products'>

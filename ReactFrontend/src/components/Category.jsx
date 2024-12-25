@@ -13,11 +13,10 @@ function Category() {
     useEffect(() => {
         CategoryService.getAllCategories()
             .then((data) => setCategories(data))
-            .catch((error) => console.error("Error fetching categories:", error));
+            .catch((error) => console.error("Kategori çekme işlemi başarısız oldu:", error));
 
         dispatch(getAllProduct())
             .then((response) => setAllProducts(response.payload))
-            .catch((error) => console.error("Error fetching products:", error));
     }, [dispatch]);
 
     useEffect(() => {

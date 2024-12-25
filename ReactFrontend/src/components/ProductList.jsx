@@ -29,10 +29,7 @@ function ProductList() {
   return (
     <div className="product-list">
       <div className="product-list-container">
-        <h1 className="product-list-heading">Ürünlerimiz</h1>
-        <p className="product-list-description">Lorem</p>
-        <p className="product-list-description">Lorem</p>
-        <p className="product-list-description">Lorem</p>
+        <h1 className="product-list-heading">Başlıca Ürünler</h1>
       </div>
       <div className='flex-row' style={{ flexWrap: 'wrap', marginTop: '25px' }}>
         {currentProducts.map((product) => (
