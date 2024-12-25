@@ -1,3 +1,4 @@
+using Application.Features.CQRS.Handlers.CategoryHandlers;
 using Application.Features.CQRS.Handlers.ProductHandlers;
 using Application.Interfaces;
 using Persistence.Context;
@@ -13,6 +14,10 @@ builder.Services.AddScoped<GetProductQueryHandler>();
 builder.Services.AddScoped<CreateProductCommandHandler>();
 builder.Services.AddScoped<DeleteProductCommandHandler>();
 builder.Services.AddScoped<UpdateProductCommandHandler>();
+
+
+builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
+builder.Services.AddScoped<GetCategoryQueryHandler>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

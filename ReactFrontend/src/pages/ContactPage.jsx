@@ -11,7 +11,6 @@ function ContactPage() {
         <div className="contact-page">
             <h1 className="contact-page-title">İletişim</h1>
             <div className="contact-container">
-                {/* Sol taraftaki form ve iletişim bilgileri */}
                 <div className="contact-form-container">
                     <div className="contact-form">
                         <div className="form-group">

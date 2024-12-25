@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\presentation\\api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|solutionrelative:presentation\\api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\presentation\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|solutionrelative:presentation\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\presentation\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|solutionrelative:presentation\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\categoryhandlers\\getcategorybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\handlers\\categoryhandlers\\getcategorybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\producthandlers\\updateproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\handlers\\producthandlers\\updateproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\categoryhandlers\\getcategoryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\handlers\\categoryhandlers\\getcategoryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\producthandlers\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\handlers\\producthandlers\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\commands\\productcommands\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\commands\\productcommands\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\producthandlers\\getproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\handlers\\producthandlers\\getproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,66 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\Api\\Program.cs",
-              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Program.cs",
-              "RelativeToolTip": "Presentation\\Api\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:34:01.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Presentation\\Api\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Presentation\\Api\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAqwCkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:21:15.864Z",
+              "WhenOpened": "2024-12-25T08:50:29.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Api\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Presentation\\Api\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T08:50:27.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UpdateProductCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\UpdateProductCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\UpdateProductCommandHandler.cs",
-              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\UpdateProductCommandHandler.cs",
-              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\UpdateProductCommandHandler.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwCEAAAAyAAAAAAAAAA==",
+              "Title": "GetCategoryByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryByIdQueryHandler.cs",
+              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryByIdQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:16:47.105Z",
+              "WhenOpened": "2024-12-25T08:49:01.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DeleteProductCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\DeleteProductCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\DeleteProductCommandHandler.cs",
-              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\DeleteProductCommandHandler.cs",
-              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\DeleteProductCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAxAAAAAAAAAA==",
+              "Title": "GetCategoryQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryQueryHandler.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryQueryHandler.cs",
+              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryQueryHandler.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:14:46.025Z",
+              "WhenOpened": "2024-12-25T08:46:47.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UpdateProductCommand.cs",
-              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
-              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
-              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "Title": "GetProductQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetProductQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetProductQueryHandler.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetProductQueryHandler.cs",
+              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetProductQueryHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:09:43.303Z",
+              "WhenOpened": "2024-12-25T08:47:01.255Z",
               "EditorCaption": ""
             }
           ]
