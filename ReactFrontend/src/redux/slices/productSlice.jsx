@@ -17,22 +17,26 @@ export const getAllProduct = createAsyncThunk("getAllProduct", async () => {
 
 export const productSlice = createSlice({
     name: "product",
-    initialState,
+    initialState: {
+        products: [], // Ürünler burada saklanır
+        loading: false,
+    },
     reducers: {
-        setselectedProduct: (state, action) => {
-            state.selectedProduct = action.payload;
-        }
+        setProducts: (state, action) => {
+            state.products = action.payload; // Gelen ürünleri Redux state'ine kaydet
+        },
     },
     extraReducers: (builder) => {
-        builder.addCase(getAllProduct.pending, (state) => {
-            state.loading = true;
-        })
-        builder.addCase(getAllProduct.fulfilled, (state, action) => {
-            state.loading = false;
-            state.products = action.payload; // Gelen verilerin doğru olduğundan emin olun
-        });
-
+        builder
+            .addCase(getAllProduct.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(getAllProduct.fulfilled, (state, action) => {
+                state.loading = false;
+                state.products = action.payload;
+            });
     },
 });
-export const { } = productSlice.actions;
+
+export const { setProducts } = productSlice.actions;
 export default productSlice.reducer;
