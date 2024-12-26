@@ -8,7 +8,7 @@ import Category from '../components/Category';
 
 function ProductsPage() {
     const dispatch = useDispatch();
-    const { products, loading } = useSelector((state) => state.product);
+    const { filteredProducts, loading } = useSelector((state) => state.product);
     const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 16;
 
@@ -16,20 +16,19 @@ function ProductsPage() {
         dispatch(getAllProduct());
     }, [dispatch]);
 
-
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-    const totalPages = Math.ceil(products.length / productsPerPage);
+    const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+
     return (
         <div>
             <h1 className='product-page-title'>Ürünlerimiz</h1>
             <div className='product-page'>
-
                 <div className="products">
                     <Category />
                     <div className="flex-row-product">
@@ -49,8 +48,6 @@ function ProductsPage() {
                         ))}
                     </div>
                 </div>
-
-
             </div>
         </div>
     );

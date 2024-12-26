@@ -47,7 +47,7 @@ function App() {
             })
           }
           <div>
-            <p style={{ textAlign: 'center' }}> toplam tutar : {totalAmount}</p>
+            <p style={{ textAlign: 'center', margin: '25px' }}> toplam tutar : {totalAmount}</p>
           </div>
         </Drawer>
         <Footer />

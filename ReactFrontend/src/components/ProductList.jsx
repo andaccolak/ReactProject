@@ -7,7 +7,7 @@ import '../app.css';
 
 function ProductList() {
   const dispatch = useDispatch();
-  const { products, loading } = useSelector((state) => state.product);
+  const { filteredProducts, loading } = useSelector((state) => state.product);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
 
@@ -17,8 +17,8 @@ function ProductList() {
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -30,21 +30,27 @@ function ProductList() {
         <h1 className="product-list-heading">Başlıca Ürünler</h1>
       </div>
       <div className='flex-row' style={{ flexWrap: 'wrap', marginTop: '25px' }}>
-        {currentProducts.map((product) => (
-          <Product key={product.productID} product={product} />
-        ))}
+        {currentProducts.length > 0 ? (
+          currentProducts.map((product) => (
+            <Product key={product.productID} product={product} />
+          ))
+        ) : (
+          <p style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>Aradığınız ürün bulunamadı.</p>
+        )}
       </div>
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button style={{ cursor: 'pointer', padding: '5px', margin: '5px', borderRadius: '15px', border: 'none', backgroundColor: 'lightgray', fontSize: '15px' }}
-            key={index + 1}
-            onClick={() => handlePageChange(index + 1)}
-            className='pagination-number'
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      {totalPages > 1 && (
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button style={{ cursor: 'pointer', padding: '5px', margin: '5px', borderRadius: '15px', border: 'none', backgroundColor: 'lightgray', fontSize: '15px' }}
+              key={index + 1}
+              onClick={() => handlePageChange(index + 1)}
+              className='pagination-number'
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,10 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+
 const initialState = {
     products: [],
+    filteredProducts: [],
     selectedProduct: {},
     loading: false,
 };
+
 const BASE_URL = "https://localhost:7240/api";
 
 export const getAllProduct = createAsyncThunk("getAllProduct", async () => {
@@ -17,13 +20,17 @@ export const getAllProduct = createAsyncThunk("getAllProduct", async () => {
 
 export const productSlice = createSlice({
     name: "product",
-    initialState: {
-        products: [], // Ürünler burada saklanır
-        loading: false,
-    },
+    initialState,
     reducers: {
         setProducts: (state, action) => {
-            state.products = action.payload; // Gelen ürünleri Redux state'ine kaydet
+            state.products = action.payload;
+            state.filteredProducts = action.payload;
+        },
+        filterProducts: (state, action) => {
+            const searchTerm = action.payload.toLowerCase();
+            state.filteredProducts = state.products.filter(product =>
+                product.productName.toLowerCase().includes(searchTerm)
+            );
         },
     },
     extraReducers: (builder) => {
@@ -34,9 +41,10 @@ export const productSlice = createSlice({
             .addCase(getAllProduct.fulfilled, (state, action) => {
                 state.loading = false;
                 state.products = action.payload;
+                state.filteredProducts = action.payload;
             });
     },
 });
 
-export const { setProducts } = productSlice.actions;
+export const { setProducts, filterProducts } = productSlice.actions;
 export default productSlice.reducer;
