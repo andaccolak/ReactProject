@@ -57,45 +57,7 @@
   margin: 0;
 }
 
-.navbar .nav-item .dropdown-menu a:hover {
-  background: rgb(200, 200, 226);
-  /* Hover durumunda mavi arka plan */
-  color: #ffffff;
-}
 
-.navbar .nav-item {
-  position: relative;
-}
-
-.navbar .nav-item .dropdown-menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 100%;
-  display: none;
-  background: var(--bs-light) !important;
-  border-radius: 10px !important;
-  transition: .5s;
-  opacity: 1;
-  padding: 10px 0;
-}
-
-.navbar .nav-item:hover .dropdown-menu {
-  display: block;
-  visibility: visible;
-  background: var(--bs-light) !important;
-  border-radius: 10px !important;
-  transition: .5s;
-  opacity: 1;
-}
-
-.navbar .nav-item .dropdown-menu a {
-  display: block;
-  padding: 8px 15px;
-  text-decoration: none;
-  color: #fff;
-  background-color: #b2b6e0;
-}
 
 .card:hover {
   box-shadow: 1px 4px 3px rgb(219, 217, 227);
@@ -130,20 +92,51 @@
   width: 90%;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  width: 100%;
+  position: relative;
+}
+
+.pagination-number {
+  padding: 8px 12px;
+  border-radius: 15px;
+  border: none;
+  background-color: lightgray;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .pagination-number:hover {
+  background-color: #7e82b5;
   color: #fff;
-  transition: background-color 0.3s ease;
 }
 
 .products {
   background-color: #7e82b5;
-  width: 80%;
-  margin-right: 40px;
+  width: 90%;
+  margin: 0 auto;
   flex-wrap: wrap;
   display: flex;
   gap: 15px;
+  justify-content: center;
   border-radius: 10px;
 }
+
+.flex-row-product {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
 
 .products-card {
   display: flex;
@@ -182,16 +175,14 @@
   justify-content: center;
   align-items: center;
   background-color: #b2b6e0;
+  width: 90%;
+  margin-left: 50px;
   height: 100px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.sort-filter {
-  width: 80px;
-  margin-left: 30px;
-  margin-top: 50px;
-}
+
 
 .SliderContainer {
   border: 1px solid #7e82b5;

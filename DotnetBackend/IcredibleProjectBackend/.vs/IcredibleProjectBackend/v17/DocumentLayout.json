@@ -42,8 +42,7 @@
               "RelativeToolTip": "Presentation\\Api\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T08:50:29.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T08:50:29.881Z"
             },
             {
               "$type": "Document",
@@ -53,7 +52,7 @@
               "RelativeDocumentMoniker": "Presentation\\Api\\Controllers\\CategoryController.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "Presentation\\Api\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwBcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T08:50:27.728Z",
               "EditorCaption": ""
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryByIdQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T08:49:01.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T08:49:01.421Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\GetCategoryQueryHandler.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAowBgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T08:46:47.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T08:46:47.283Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetProductQueryHandler.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T08:47:01.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T08:47:01.255Z"
             }
           ]
         }

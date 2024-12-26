@@ -38,7 +38,6 @@ function ContactPage() {
                     </div>
                 </div>
 
-                {/* Mesaj giriş alanı */}
                 <div className="contact-text">
                     <textarea
                         type="text"

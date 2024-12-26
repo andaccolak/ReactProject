@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import CategoryService from "../services/CategoryService";
 import { getAllProduct, setProducts } from "../redux/slices/productSlice";
 import "../css/category.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Category() {
     const [categories, setCategories] = useState([]);
@@ -37,20 +39,17 @@ function Category() {
     };
 
     return (
-        <div className="category-container">
-            <h2>Kategoriler</h2>
-            <div className="category-list">
-                {categories.map((category) => (
-                    <button
-                        key={category.categoryID}
-                        className={`category-button ${selectedCategory === category.categoryName ? "active" : ""
-                            }`}
-                        onClick={() => handleButtonClick(category.categoryName)}
-                    >
-                        {category.categoryName}
-                    </button>
-                ))}
-            </div>
+        <div className="category-list">
+            {categories.map((category) => (
+                <button
+                    key={category.categoryID}
+                    className={`category-button ${selectedCategory === category.categoryName ? "active" : ""
+                        }`}
+                    onClick={() => handleButtonClick(category.categoryName)}
+                >
+                    {category.categoryName}
+                </button>
+            ))}
         </div>
     );
 }

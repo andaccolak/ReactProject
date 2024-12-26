@@ -26,36 +26,32 @@ function ProductsPage() {
         setCurrentPage(pageNumber);
     };
     return (
-
-
         <div>
             <h1 className='product-page-title'>Ürünlerimiz</h1>
             <div className='product-page'>
-                <div className='sort-filter'>
-                    <div>
-                        <Category />
-                    </div>
-                </div>
-                <div className='products'>
-                    <div className='flex-row' style={{ flexWrap: 'wrap', marginTop: '25px' }}>
+
+                <div className="products">
+                    <Category />
+                    <div className="flex-row-product">
                         {currentProducts.map((product) => (
                             <Product key={product.id} product={product} />
                         ))}
                     </div>
                     <div className="pagination">
                         {Array.from({ length: totalPages }, (_, index) => (
-                            <button style={{ cursor: 'pointer', padding: '5px', margin: '5px', borderRadius: '15px', border: 'none', backgroundColor: 'lightgray', fontSize: '15px' }}
+                            <button
+                                className="pagination-number"
                                 key={index + 1}
                                 onClick={() => handlePageChange(index + 1)}
-                                className='pagination-number'
                             >
                                 {index + 1}
                             </button>
                         ))}
                     </div>
                 </div>
-            </div>
 
+
+            </div>
         </div>
     );
 }
