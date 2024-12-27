@@ -134,6 +134,27 @@
     margin-right: 50px;
 }
 
+.admin-page-title-div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 80%;
+}
+
+.add-product-form {
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
 .update-form input {
     padding: 8px;
     font-size: 14px;

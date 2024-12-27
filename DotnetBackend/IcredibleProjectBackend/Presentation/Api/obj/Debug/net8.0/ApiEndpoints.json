@@ -91,6 +91,16 @@
   },
   {
     "ContainingType": "ProductsController",
+    "Method": "GetBestSellerProducts",
+    "RelativePath": "api/Products/bestseller",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductsController",
     "Method": "ProductList",
     "RelativePath": "api/Products/list",
     "HttpMethod": "GET",

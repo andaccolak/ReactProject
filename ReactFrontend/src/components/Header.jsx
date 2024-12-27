@@ -69,21 +69,21 @@ function Header() {
                                     className="dropdown-item"
                                     onClick={() => handleCategoryClick('Kategori2')}
                                 >
-                                    Kategori2
+                                    Kullanıcı Yönetim
                                 </a>
                                 <a
                                     className="dropdown-item"
                                     href="#!"
                                     onClick={() => handleCategoryClick('Kategori3')}
                                 >
-                                    Kategori3
+                                    Destek Talepleri
                                 </a>
                                 <a
                                     className="dropdown-item"
                                     href="#!"
                                     onClick={() => handleCategoryClick('Kategori4')}
                                 >
-                                    Kategori4
+                                    Sipariş Yönetim
                                 </a>
                             </div>
                         )}

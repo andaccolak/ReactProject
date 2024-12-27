@@ -39,6 +39,9 @@ function adminproduct({ product, onDeleteSuccess }) {
                 console.error('Silme işlemi sırasında bir hata oluştu:', error);
                 alert('Silme işlemi başarısız oldu.');
             }
+            finally {
+                window.location.reload();
+            }
         }
     };
 
@@ -86,8 +89,8 @@ function adminproduct({ product, onDeleteSuccess }) {
                     </div>
                     <div className="title">{productName}</div>
                     <div className="price">${price}</div>
-                    <div className="quantity">Stok: {quantity}</div>
-                    <div className="sales">Satış: {sales}</div>
+                    <div className="quantity"> {quantity}</div>
+                    <div className="sales"> {sales}</div>
                     <div>
                         <button className="button-delete" onClick={handleDelete}>
                             Sil

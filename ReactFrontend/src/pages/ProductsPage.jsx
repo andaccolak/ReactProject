@@ -31,9 +31,13 @@ function ProductsPage() {
                 <div className="products">
                     <Category />
                     <div className="flex-row-product">
-                        {currentProducts.map((product) => (
-                            <Product key={product.id} product={product} />
-                        ))}
+                        {currentProducts.length > 0 ? (
+                            currentProducts.map((product) => (
+                                <Product key={product.productID} product={product} />
+                            ))
+                        ) : (
+                            <p style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>Aradığınız ürün bulunamadı.</p>
+                        )}
                     </div>
                     <div className="pagination">
                         {Array.from({ length: totalPages }, (_, index) => (

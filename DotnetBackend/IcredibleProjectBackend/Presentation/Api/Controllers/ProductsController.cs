@@ -12,21 +12,18 @@ public class ProductsController : ControllerBase
     private readonly UpdateProductCommandHandler _updateProductCommandHandler;
     private readonly GetProductQueryHandler _getProductQueryHandler;
     private readonly GetProductByIdQueryHandler _getProductByIdQueryHandler;
+    private readonly GetBestSellerProductQueryHandler _getBestSellerProductQueryHandler;
 
-    public ProductsController(CreateProductCommandHandler createProductCommandHandler,
-                               DeleteProductCommandHandler deleteProductCommandHandler,
-                               UpdateProductCommandHandler updateProductCommandHandler,
-                               GetProductQueryHandler getProductQueryHandler,
-                               GetProductByIdQueryHandler getProductByIdQueryHandler)
+    public ProductsController(CreateProductCommandHandler createProductCommandHandler, DeleteProductCommandHandler deleteProductCommandHandler, UpdateProductCommandHandler updateProductCommandHandler, GetProductQueryHandler getProductQueryHandler, GetProductByIdQueryHandler getProductByIdQueryHandler, GetBestSellerProductQueryHandler getBestSellerProductQueryHandler)
     {
         _createProductCommandHandler = createProductCommandHandler;
         _deleteProductCommandHandler = deleteProductCommandHandler;
         _updateProductCommandHandler = updateProductCommandHandler;
         _getProductQueryHandler = getProductQueryHandler;
         _getProductByIdQueryHandler = getProductByIdQueryHandler;
+        _getBestSellerProductQueryHandler = getBestSellerProductQueryHandler;
     }
 
-    // Tüm ürünleri listelemek için benzersiz bir yol
     [HttpGet("list")]
     public async Task<IActionResult> ProductList()
     {
@@ -34,7 +31,6 @@ public class ProductsController : ControllerBase
         return Ok(values);
     }
 
-    // Belirli bir ürünü ID'ye göre almak için benzersiz bir yol
     [HttpGet("{id}")]
     public async Task<IActionResult> GetProduct(int id)
     {
@@ -42,7 +38,6 @@ public class ProductsController : ControllerBase
         return Ok(value);
     }
 
-    // Yeni bir ürün oluşturmak için benzersiz bir yol
     [HttpPost]
     public async Task<IActionResult> CreateProduct(CreateProductCommand command)
     {
@@ -50,7 +45,6 @@ public class ProductsController : ControllerBase
         return Ok("Ürün Eklendi");
     }
 
-    // Bir ürünü silmek için benzersiz bir yol
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProduct(int id)
     {
@@ -58,11 +52,17 @@ public class ProductsController : ControllerBase
         return Ok("Ürün Silindi");
     }
 
-    // Bir ürünü güncellemek için benzersiz bir yol
     [HttpPut]
     public async Task<IActionResult> UpdateProduct(UpdateProductCommand command)
     {
         await _updateProductCommandHandler.Handle(command);
         return Ok("Ürün Güncellendi");
+    }
+
+    [HttpGet("bestseller")]
+    public IActionResult GetBestSellerProducts()
+    {
+        var values = _getBestSellerProductQueryHandler.Handle();
+        return Ok(values);
     }
 }
