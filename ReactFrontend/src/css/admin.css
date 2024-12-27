@@ -121,3 +121,27 @@
     margin-left: 50px;
     align-items: center;
 }
+
+.update-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    width: 80%;
+    margin-right: 50px;
+}
+
+.update-form input {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.button-save,
+.button-cancel {
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
