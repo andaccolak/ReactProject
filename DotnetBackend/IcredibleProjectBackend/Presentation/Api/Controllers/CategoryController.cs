@@ -27,8 +27,6 @@ namespace Api.Controllers
             var values = await _getCategoryQueryHandler.Handle();
             return Ok(values);
         }
-
-        // Belirli bir ürünü ID'ye göre almak için benzersiz bir yol
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCategory(int id)
         {

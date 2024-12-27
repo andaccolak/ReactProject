@@ -3,7 +3,6 @@ import Product from '../components/Product';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProduct } from '../redux/slices/productSlice';
-import { FaSortAmountDown } from "react-icons/fa";
 import Category from '../components/Category';
 
 function ProductsPage() {

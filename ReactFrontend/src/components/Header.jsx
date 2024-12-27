@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import '../css/header.css';
-import { GoSearch } from "react-icons/go";
-import { MdAccountCircle } from "react-icons/md";
-import { BsBasket2Fill } from "react-icons/bs";
-import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setDrawer } from '../redux/slices/basketSlice';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
 import { filterProducts } from '../redux/slices/productSlice';
+import { MdAccountCircle } from "react-icons/md";
+import { BsBasket2Fill } from "react-icons/bs";
+import Badge from '@mui/material/Badge';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import '../css/header.css';
 
 function Header() {
     const dispatch = useDispatch();
-    const { products } = useSelector((store) => store.basket);
     const navigate = useNavigate();
+    const { products } = useSelector((store) => store.basket);
     const [searchTerm, setSearchTerm] = useState('');
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         setSearchTerm('');
@@ -26,24 +26,83 @@ function Header() {
         dispatch(filterProducts(e.target.value));
     };
 
+    const handleCategoryClick = (categoryName) => {
+        navigate(`/products?category=${categoryName}`);
+    };
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
+    const handleNavItemClick = (path) => {
+        setSearchTerm('');
+        dispatch(filterProducts(''));
+        navigate(path);
+    };
+
     return (
         <div>
-            <div onClick={() => navigate("/")}>
-                <img className='logo' src="./src/images/ep.png" />
+            <div onClick={() => handleNavItemClick("/")}>
+                <img className="logo" src="./src/images/ep.png" alt="Logo" />
             </div>
-            <div className='navbar flex-row-navbar'>
-                <div className='navbar-links flex-row'>
-                    <p onClick={() => navigate("/")} className='navbar-link'>Anasayfa</p>
-                    <p onClick={() => navigate("/products")} className='navbar-link'>Ürünler</p>
-                    <p onClick={() => navigate("/About")} className='navbar-link'>Hakkımızda</p>
-                    <p onClick={() => navigate("/Contact")} className='navbar-link'>İletişim</p>
+
+            <div className="navbar flex-row-navbar">
+                <div className="navbar-links flex-row">
+                    <p onClick={() => handleNavItemClick("/")} className="navbar-link">Anasayfa</p>
+                    <p onClick={() => handleNavItemClick("/products")} className="navbar-link">Ürünler</p>
+                    <p onClick={() => handleNavItemClick("/About")} className="navbar-link">Hakkımızda</p>
+                    <p onClick={() => handleNavItemClick("/Contact")} className="navbar-link">İletişim</p>
+
+                    <div className="nav-item">
+                        <p className="navbar-link" onClick={toggleDropdown}>
+                            Admin
+                        </p>
+                        {dropdownOpen && (
+                            <div className="dropdown-menu">
+                                <a
+                                    className="dropdown-item"
+                                    onClick={() => handleNavItemClick("/Admin-Product")}
+                                >
+                                    Ürün Yönetim
+                                </a>
+                                <a
+                                    className="dropdown-item"
+                                    onClick={() => handleCategoryClick('Kategori2')}
+                                >
+                                    Kategori2
+                                </a>
+                                <a
+                                    className="dropdown-item"
+                                    href="#!"
+                                    onClick={() => handleCategoryClick('Kategori3')}
+                                >
+                                    Kategori3
+                                </a>
+                                <a
+                                    className="dropdown-item"
+                                    href="#!"
+                                    onClick={() => handleCategoryClick('Kategori4')}
+                                >
+                                    Kategori4
+                                </a>
+                            </div>
+                        )}
+                    </div>
                 </div>
-                <div className='navbar-icons'>
+
+                <div className="navbar-icons">
                     <Box
-                        sx={{ '& > :not(style)': { m: 1, width: '25ch', color: 'white', marginBottom: '25px' } }}
+                        sx={{
+                            '& > :not(style)': {
+                                m: 1,
+                                width: '15ch',
+                                color: 'white',
+                                marginBottom: '20px'
+                            }
+                        }}
                     >
                         <TextField
-                            style={{ color: 'white', fontSize: '25px' }}
+                            style={{ color: 'white', fontSize: '20px' }}
                             id="standard-basic"
                             label="Ürün Ara.."
                             variant="standard"
@@ -57,10 +116,23 @@ function Header() {
                             }}
                         />
                     </Box>
-                    <GoSearch />
-                    <MdAccountCircle onClick={() => navigate("/register")} />
-                    <Badge onClick={() => dispatch(setDrawer())} style={{ padding: '3px' }} badgeContent={products.length} color="warning">
-                        <BsBasket2Fill />
+
+                    <MdAccountCircle
+                        style={{ fontSize: '25px', cursor: 'pointer' }}
+                        onClick={() => handleNavItemClick("/register")}
+                    />
+
+                    <Badge
+                        onClick={() => {
+                            setSearchTerm('');
+                            dispatch(filterProducts(''));
+                            dispatch(setDrawer());
+                        }}
+                        style={{ padding: '3px', cursor: 'pointer' }}
+                        badgeContent={products.length}
+                        color="warning"
+                    >
+                        <BsBasket2Fill style={{ fontSize: '25px' }} />
                     </Badge>
                 </div>
             </div>
