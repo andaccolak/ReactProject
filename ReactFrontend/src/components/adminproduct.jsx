@@ -18,7 +18,7 @@ function adminproduct({ product, onDeleteSuccess }) {
         quantity
 
     });
-
+    const shortTitle = productName.split(' ').slice(0, 3).join(' ');
     const handleDelete = async () => {
         const confirmDelete = window.confirm(`${productName} adlı ürünü silmek istediğinize emin misiniz?`);
         if (confirmDelete) {

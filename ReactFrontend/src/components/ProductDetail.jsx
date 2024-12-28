@@ -94,9 +94,10 @@ const ProductDetail = () => {
               alignItems: 'center',
             }}
           >
-            <CiCirclePlus onClick={increment} className="counter-icon" />
-            <p style={{ fontSize: '30px', margin: '10px', userSelect: 'none', color: 'white' }}>{count}</p>
             <CiCircleMinus onClick={decrement} className="counter-icon" />
+
+            <p style={{ fontSize: '30px', margin: '10px', userSelect: 'none', color: 'white' }}>{count}</p>
+            <CiCirclePlus onClick={increment} className="counter-icon" />
           </div>
         </div>
       </div>

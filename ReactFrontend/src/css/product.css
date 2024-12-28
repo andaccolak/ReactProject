@@ -8,7 +8,7 @@
 
 .cards {
   width: 200px;
-  height: 350px;
+  height: 400px;
   border-radius: 10px;
   margin: 15px;
 }
@@ -30,11 +30,10 @@
   margin-left: 400px;
 }
 
-.card-price {
+.cards-price {
   color: #ffffff;
   font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 5px;
   text-align: center;
 }
 
@@ -59,22 +58,24 @@
 
 
 
-.card:hover {
+.cards:hover {
   box-shadow: 1px 4px 3px rgb(219, 217, 227);
   transition: all 0.6s;
   cursor: pointer;
 }
 
-.detail-button {
+.details-button {
+  background-color: #b2b6e0;
+  color: white;
   border: none;
-  padding: 3px;
+  margin: -10px;
+  padding: 10px 20px;
   border-radius: 5px;
-  background-color: rgb(55, 55, 133);
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.detail-button:hover {
+.details-button:hover {
   cursor: pointer;
   background-color: rgb(130, 128, 235);
   transition: all 0.6s;
@@ -120,7 +121,7 @@
 .products {
   background-color: #7e82b5;
   width: 90%;
-  margin-left: 55px;
+  margin-left: 50px;
   flex-wrap: wrap;
   display: flex;
   gap: 15px;
@@ -176,7 +177,7 @@
   align-items: center;
   background-color: #b2b6e0;
   width: 90%;
-  margin-left: 55px;
+  margin-left: 50px;
   height: 100px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;

@@ -9,32 +9,38 @@
 }
 
 .images {
-    width: 70%;
+    width: 40%;
     height: 100px;
 }
 
 .title {
-    width: 87%;
+    width: 1000px;
     height: 50px;
     padding: 12px;
     background-color: #fff;
     border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
 }
 
 .price {
-    width: 87%;
+    width: 30%;
     height: 50px;
     padding: 12px;
     background-color: #fff;
     border-radius: 15px;
+    text-align: center;
+
 }
 
 .quantity {
-    width: 87%;
+    width: 30%;
     height: 50px;
     padding: 12px;
     background-color: #fff;
     border-radius: 15px;
+    text-align: center;
+
 }
 
 .infos {
@@ -45,11 +51,13 @@
 }
 
 .sales {
-    width: 87%;
+    width: 30%;
     height: 50px;
     padding: 12px;
     background-color: #fff;
     border-radius: 15px;
+    text-align: center;
+
 }
 
 .button-delete {

@@ -244,11 +244,11 @@ function AdminPageproduct() {
 
             <div className='list'>
                 <p style={{ marginLeft: '60px' }}>Görsel</p>
-                <p>İsim</p>
-                <p style={{ marginLeft: '40px' }}>Fiyat</p>
-                <p style={{ marginLeft: '35px' }}>Stok</p>
-                <p style={{ marginLeft: '30px' }}>Satış</p>
-                <p style={{ marginRight: '50px' }}>İşlemler</p>
+                <p style={{ marginLeft: '100px' }}>İsim</p>
+                <p style={{ marginLeft: '80px' }}>Fiyat</p>
+                <p style={{ marginLeft: '-20px' }}>Stok</p>
+                <p style={{ marginLeft: '-30px' }}>Satış</p>
+                <p style={{ marginLeft: '-30px' }}>İşlemler</p>
             </div>
 
             <div className='product-pages'>

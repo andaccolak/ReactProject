@@ -28,13 +28,13 @@ function Productslider() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
-        // autoplay: true,
-        // autoplaySpeed: 5000, // 5 seconds
+        autoplay: true,
+        autoplaySpeed: 5000,
     };
 
     return (
         <Container className="product-slider-container">
-            <h1 style={{ marginLeft: '500px' }}>Çok Satanlar</h1>
+            <h1 className="product-slider-heading">Çok Satanlar</h1>
             <Slider {...settings} className='slider'>
                 {cards.map((card) => {
                     const shortTitle = card.productName.split(' ').slice(0, 3).join(' ');
@@ -42,7 +42,7 @@ function Productslider() {
                         <Card key={card.productID} className='card'>
                             <img className='image' src={card.image} alt={card.productName} />
                             <div>
-                                <p style={{ color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif' }}>{shortTitle}</p>
+                                <p style={{ margin: '-5px', color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '20px' }}>{shortTitle}</p>
                                 <h3 className='card-price'>{card.price} ₺ / Kg</h3>
                             </div>
                             <div className='flex-row'>

@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetBestSellerProductQueryHandler.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetBestSellerProductQueryHandler.cs",
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetBestSellerProductQueryHandler.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBkAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAzwBkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-28T00:54:32.454Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Presentation\\Api\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:07:41.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:07:41.736Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Results\\ProductResult\\GetBestSellerProductsQueryResult.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAiwAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T22:59:56.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T22:59:56.311Z"
             }
           ]
         }
