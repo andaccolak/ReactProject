@@ -1,50 +1,58 @@
-import React, { useState } from 'react';
-import '../css/product.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Slider from "react-slick";
+import { Container, Card } from 'react-bootstrap';
+import '../css/productslider.css';
+import { useNavigate } from 'react-router-dom';
 
 function Productslider() {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [cards, setCards] = useState([]);
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        const fetchBestSellingProducts = async () => {
+            try {
+                const response = await axios.get('https://localhost:7240/api/Products/bestseller');
+                setCards(response.data);
+            } catch (error) {
+                console.error('Error fetching best-selling products:', error);
+            }
+        };
 
-    //apiden çekilen verilerde filtreleme yapılarak doldurulacak
-    const sliderData = [
-        'https://via.placeholder.com/300x200.png?text=Gorsel+1',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+2',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+3',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+4',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+5',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+6',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+7',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+8',
-        'https://via.placeholder.com/300x200.png?text=Gorsel+9'
-    ];
+        fetchBestSellingProducts();
+    }, []);
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 3) % sliderData.length);
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        // autoplay: true,
+        // autoplaySpeed: 5000, // 5 seconds
     };
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 3 + sliderData.length) % sliderData.length);
-    };
-
-    const visibleSlides = [
-        sliderData[currentIndex],
-        sliderData[(currentIndex + 1) % sliderData.length],
-        sliderData[(currentIndex + 2) % sliderData.length]
-    ];
 
     return (
-        <div className='SliderContainer'>
-            <h1 className='SliderTitle'>Çok Satanlar</h1>
-            <div className='cardContainer'>
-                <button className='sliderButton' onClick={prevSlide}>{'<'}</button>
-                {visibleSlides.map((image, index) => (
-                    <div className='SliderCard' key={index}>
-                        <img src={image} alt={`Görsel ${currentIndex + index + 1}`} className='sliderImage' />
-                    </div>
-                ))}
-                <button className='sliderButton' onClick={nextSlide}>{'>'}</button>
-            </div>
-        </div>
+        <Container className="product-slider-container">
+            <h1 style={{ marginLeft: '500px' }}>Çok Satanlar</h1>
+            <Slider {...settings} className='slider'>
+                {cards.map((card) => {
+                    const shortTitle = card.productName.split(' ').slice(0, 3).join(' ');
+                    return (
+                        <Card key={card.productID} className='card'>
+                            <img className='image' src={card.image} alt={card.productName} />
+                            <div>
+                                <p style={{ color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif' }}>{shortTitle}</p>
+                                <h3 className='card-price'>{card.price} ₺ / Kg</h3>
+                            </div>
+                            <div className='flex-row'>
+                                <button onClick={() => navigate("/product-detail/" + card.productID)} className='detail-button'>Detayına Git</button>
+                            </div>
+                        </Card>
+                    );
+                })}
+            </Slider>
+        </Container>
     );
 }
 

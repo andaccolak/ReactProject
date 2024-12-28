@@ -23,6 +23,7 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
             var values = _productRepository.GetBestSellerProducts();
             return values.Select(x => new GetBestSellerProductsQueryResult
             {
+                ProductID = x.ProductID,
                 ProductName = x.ProductName,
                 Price = x.Price,
                 Quantity = x.Quantity,

@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Presentation\\Api\\Program.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Program.cs",
               "RelativeToolTip": "Presentation\\Api\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T23:07:41.736Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "Presentation\\Api\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAgwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:01:02.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:01:02.016Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Results\\ProductResult\\GetBestSellerProductsQueryResult.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAiwAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T22:59:56.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T22:59:56.311Z"
             }
           ]
         }

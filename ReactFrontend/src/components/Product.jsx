@@ -9,7 +9,7 @@ function Product({ product }) {
   const shortTitle = productName.split(' ').slice(0, 3).join(' ');
 
   return (
-    <div className="card" onClick={() => {
+    <div className="cards" onClick={() => {
       navigate(`/product-detail/${productID}`);
     }}>
       <img className='image' src={image} alt="" />
