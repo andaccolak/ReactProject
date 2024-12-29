@@ -52,18 +52,29 @@ function App() {
             })
           }
           <div>
-            <p style={{
-              textAlign: 'center', margin: '25px', backgroundColor: '#7e82b5', color: 'white'
-              , padding: '10px', borderRadius: '5px', fontSize: '20px', fontWeight: 'bold'
-            }}> toplam tutar : {totalAmount} ₺</p>
+
+            {totalAmount > 0 && (
+              <p style={{
+                textAlign: 'center', margin: '25px', backgroundColor: '#7e82b5', color: 'white'
+                , padding: '10px', borderRadius: '5px', fontSize: '20px', fontWeight: 'bold'
+              }}> toplam tutar : {totalAmount} ₺</p>
+            )}
           </div>
           <div>
-            <button style={{
-              textAlign: 'center', marginLeft: '180px',
-              marginBottom: '50px', backgroundColor: '#7e82b5', color: 'white', cursor: 'pointer'
-              , padding: '10px', borderRadius: '5px', fontSize: '20px', fontWeight: 'bold'
-            }}> Ödeme Ekranına Git</button>
+
+
+            {totalAmount > 0 && (
+              <button style={{
+                textAlign: 'center', marginLeft: '180px',
+                marginBottom: '50px', backgroundColor: '#7e82b5', color: 'white', cursor: 'pointer'
+                , padding: '10px', borderRadius: '5px', fontSize: '20px', fontWeight: 'bold'
+              }}> Ödeme Ekranına Git</button>)}
+
+            {totalAmount == 0 && (
+              <p style={{ margin: '50px' }}>Sepetiniz boş</p>
+            )}
           </div>
+
         </Drawer>
         <Footer />
       </PageContainer>
