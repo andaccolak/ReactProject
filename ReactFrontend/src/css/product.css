@@ -30,6 +30,10 @@
   margin-left: 400px;
 }
 
+.similar-product-container {
+  border: 1px solid black;
+}
+
 .cards-price {
   color: #ffffff;
   font-size: 1.5em;

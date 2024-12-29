@@ -20,8 +20,16 @@ namespace Persistence.Repositories.ProductRepository
 
         public List<Product> GetBestSellerProducts()
         {
-            var values = _context.Products.OrderByDescending(x => x.Sales).Take(9). ToList();
+            var values = _context.Products.OrderByDescending(x => x.Sales).Take(9).ToList();
             return values;
         }
+
+        public List<Product> GetProductsByCategory(int categoryId)
+        {
+            return _context.Products
+                .Where(p => p.CategoryID == categoryId)
+                .ToList();
+        }
+
     }
 }

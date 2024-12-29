@@ -10,5 +10,6 @@ namespace Application.Interfaces
     public interface IProductRepository
     {
         List<Product> GetBestSellerProducts();
+        List<Product> GetProductsByCategory(int categoryId);
     }
 }

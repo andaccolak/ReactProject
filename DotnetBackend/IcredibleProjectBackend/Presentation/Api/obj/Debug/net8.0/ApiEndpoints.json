@@ -101,6 +101,22 @@
   },
   {
     "ContainingType": "ProductsController",
+    "Method": "GetSimilarProducts",
+    "RelativePath": "api/Products/GetSimilarProducts/{categoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductsController",
     "Method": "ProductList",
     "RelativePath": "api/Products/list",
     "HttpMethod": "GET",

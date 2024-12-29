@@ -13,8 +13,9 @@ public class ProductsController : ControllerBase
     private readonly GetProductQueryHandler _getProductQueryHandler;
     private readonly GetProductByIdQueryHandler _getProductByIdQueryHandler;
     private readonly GetBestSellerProductQueryHandler _getBestSellerProductQueryHandler;
+    private readonly GetSimilarProductsQueryHandler _getSimilarProductsQueryHandler;
 
-    public ProductsController(CreateProductCommandHandler createProductCommandHandler, DeleteProductCommandHandler deleteProductCommandHandler, UpdateProductCommandHandler updateProductCommandHandler, GetProductQueryHandler getProductQueryHandler, GetProductByIdQueryHandler getProductByIdQueryHandler, GetBestSellerProductQueryHandler getBestSellerProductQueryHandler)
+    public ProductsController(CreateProductCommandHandler createProductCommandHandler, DeleteProductCommandHandler deleteProductCommandHandler, UpdateProductCommandHandler updateProductCommandHandler, GetProductQueryHandler getProductQueryHandler, GetProductByIdQueryHandler getProductByIdQueryHandler, GetBestSellerProductQueryHandler getBestSellerProductQueryHandler, GetSimilarProductsQueryHandler getSimilarProductsQueryHandler)
     {
         _createProductCommandHandler = createProductCommandHandler;
         _deleteProductCommandHandler = deleteProductCommandHandler;
@@ -22,6 +23,7 @@ public class ProductsController : ControllerBase
         _getProductQueryHandler = getProductQueryHandler;
         _getProductByIdQueryHandler = getProductByIdQueryHandler;
         _getBestSellerProductQueryHandler = getBestSellerProductQueryHandler;
+        _getSimilarProductsQueryHandler = getSimilarProductsQueryHandler;
     }
 
     [HttpGet("list")]
@@ -63,6 +65,12 @@ public class ProductsController : ControllerBase
     public IActionResult GetBestSellerProducts()
     {
         var values = _getBestSellerProductQueryHandler.Handle();
+        return Ok(values);
+    }
+    [HttpGet("GetSimilarProducts/{categoryId}")]
+    public  IActionResult GetSimilarProducts(int categoryId)
+    {
+        var values =  _getSimilarProductsQueryHandler.Handle(categoryId);
         return Ok(values);
     }
 }

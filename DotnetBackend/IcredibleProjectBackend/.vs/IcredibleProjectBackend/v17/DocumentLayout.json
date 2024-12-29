@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\producthandlers\\getbestsellerproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\handlers\\producthandlers\\getbestsellerproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\producthandlers\\getsimilarproductsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\handlers\\producthandlers\\getsimilarproductsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\results\\productresult\\getbestsellerproductsqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\features\\cqrs\\results\\productresult\\getbestsellerproductsqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\infastructure\\persistence\\repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|solutionrelative:infastructure\\persistence\\repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\presentation\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,56 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GetBestSellerProductQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetBestSellerProductQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetBestSellerProductQueryHandler.cs",
-              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetBestSellerProductQueryHandler.cs",
-              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetBestSellerProductQueryHandler.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAzwBkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T00:54:32.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\Api\\Program.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Program.cs",
               "RelativeToolTip": "Presentation\\Api\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:07:41.736Z"
+              "WhenOpened": "2024-12-29T00:46:47.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Presentation\\Api\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Presentation\\Api\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAgwDwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAewEgAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:01:02.016Z"
+              "WhenOpened": "2024-12-29T00:42:06.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetSimilarProductsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetSimilarProductsQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetSimilarProductsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetSimilarProductsQueryHandler.cs",
+              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\GetSimilarProductsQueryHandler.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T00:33:31.237Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetBestSellerProductsQueryResult.cs",
-              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Results\\ProductResult\\GetBestSellerProductsQueryResult.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Results\\ProductResult\\GetBestSellerProductsQueryResult.cs",
-              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Results\\ProductResult\\GetBestSellerProductsQueryResult.cs",
-              "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Results\\ProductResult\\GetBestSellerProductsQueryResult.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAsAAAAuAAAAAAAAAA==",
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
+              "RelativeToolTip": "Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T22:59:56.311Z"
+              "WhenOpened": "2024-12-29T00:20:02.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "Core\\Application\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T00:19:01.968Z",
+              "EditorCaption": ""
             }
           ]
         }

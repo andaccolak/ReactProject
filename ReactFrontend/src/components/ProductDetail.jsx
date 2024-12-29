@@ -24,7 +24,6 @@ const ProductDetail = () => {
 
   const decrement = () => {
     if (count > 1) {
-
       dispatch(decreaseFromBasket({ productID: selectedProduct.productID }));
     } else if (count === 1) {
       dispatch(removeProduct({ productID: selectedProduct.productID }));
@@ -44,7 +43,6 @@ const ProductDetail = () => {
 
   const addBasket = () => {
     const { productID, price, image, productName } = selectedProduct;
-
     const payload = {
       productID,
       price,
@@ -52,7 +50,6 @@ const ProductDetail = () => {
       productName,
       count: 1,
     };
-
     dispatch(addToBasket(payload));
     setIsVisible(true);
   };
@@ -62,44 +59,69 @@ const ProductDetail = () => {
   }, [id]);
 
   useEffect(() => {
-
     setIsVisible(true);
-
   }, [basketProduct]);
 
   if (!selectedProduct) return <div>Loading...</div>;
 
   return (
-    <div className="product-card">
-      <div className="product-image-wrapper">
-        <img className="product-image" src={selectedProduct.image} alt="Ürün Resmi" />
-      </div>
-      <div className="product-info">
-        <div className="product-header">
-          <span className="product-title">{selectedProduct.productName}</span>
-          <span className="product-price">{selectedProduct.price}₺</span>
-          <span style={{ marginLeft: '10px' }} className="product-weight">/Kg/Lt/Adet</span>
+    <div className="product-detail-page">
+      <div className="product-card">
+        <div className="product-image-wrapper">
+          <img
+            className="product-image"
+            src={selectedProduct.image}
+            alt="Ürün Resmi"
+          />
         </div>
-        <div className="product-description">{selectedProduct.description}</div>
-        <div className="detail-counter">
-          <button onClick={addBasket} className="add-to-cart-button">
-            Sepete Ekle
-            <BsBasket style={{ marginLeft: '10px' }} />
-          </button>
-          <div
-            className="plus-minus"
-            style={{
-              visibility: count > 0 ? 'visible' : 'hidden',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <CiCircleMinus onClick={decrement} className="counter-icon" />
 
-            <p style={{ fontSize: '30px', margin: '10px', userSelect: 'none', color: 'white' }}>{count}</p>
-            <CiCirclePlus onClick={increment} className="counter-icon" />
+        <div className="product-info">
+          <div
+            className="product-header"
+            style={{ justifyContent: 'space-between' }}
+          >
+            <div className="product-title">{selectedProduct.productName}</div>
+            <div style={{ fontSize: '25px' }} className="product-price">
+              {selectedProduct.price}₺
+            </div>
+          </div>
+          <div className="product-description">{selectedProduct.description}</div>
+          <div className="detail-counter">
+            <button onClick={addBasket} className="add-to-cart-button">
+              Sepete Ekle
+              <BsBasket style={{ marginLeft: '10px' }} />
+            </button>
+            <div
+              className="plus-minus"
+              style={{
+                visibility: count > 0 ? 'visible' : 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <CiCircleMinus onClick={decrement} className="counter-icon" />
+              <p
+                style={{
+                  fontSize: '30px',
+                  margin: '10px',
+                  userSelect: 'none',
+                  color: 'white',
+                }}
+              >
+                {count}
+              </p>
+              <CiCirclePlus onClick={increment} className="counter-icon" />
+            </div>
           </div>
         </div>
+      </div>
+
+
+
+
+      <div className="similar-product-container">
+        ,
+
       </div>
     </div>
   );
