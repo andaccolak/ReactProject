@@ -6,6 +6,7 @@ import { BsBasket } from "react-icons/bs";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import { addToBasket, decreaseFromBasket, removeProduct } from '../redux/slices/basketSlice';
+import SimilarProducts from './SimilarProducts';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -116,12 +117,8 @@ const ProductDetail = () => {
         </div>
       </div>
 
-
-
-
       <div className="similar-product-container">
-        ,
-
+        <SimilarProducts categoryId={selectedProduct.categoryID} />
       </div>
     </div>
   );
