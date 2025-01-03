@@ -14,8 +14,8 @@ function Product({ product }) {
     }}>
       <img className='image' src={image} alt="" />
       <div>
-        <p style={{ color: 'white', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '18px', margin: '35px' }}>{shortTitle}</p>
-        <h3 className='cards-price'>{price} ₺ / Kg</h3>
+        <p style={{ color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '18px', margin: '35px' }}>{shortTitle}</p>
+        <h3 className='cards-price'>{price} ₺</h3>
       </div>
       <div className='flex-row'>
         <button onClick={() => navigate("/product-details/" + productID)} className='details-button'>Detayına Git</button>

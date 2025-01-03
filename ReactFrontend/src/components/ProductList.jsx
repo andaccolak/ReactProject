@@ -15,6 +15,28 @@ function ProductList() {
     dispatch(getAllProduct());
   }, [dispatch]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const productList = document.querySelector('.product-list');
+    if (productList) {
+      productList.classList.add('hidden');
+      observer.observe(productList);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
@@ -41,7 +63,16 @@ function ProductList() {
       {totalPages > 1 && (
         <div className="pagination">
           {Array.from({ length: totalPages }, (_, index) => (
-            <button style={{ cursor: 'pointer', padding: '5px', margin: '5px', borderRadius: '15px', border: 'none', backgroundColor: 'lightgray', fontSize: '15px' }}
+            <button
+              style={{
+                cursor: 'pointer',
+                padding: '5px',
+                margin: '5px',
+                borderRadius: '15px',
+                border: 'none',
+                backgroundColor: 'lightgray',
+                fontSize: '15px',
+              }}
               key={index + 1}
               onClick={() => handlePageChange(index + 1)}
               className='pagination-number'

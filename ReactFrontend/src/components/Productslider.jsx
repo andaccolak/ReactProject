@@ -20,6 +20,21 @@ function Productslider() {
         };
 
         fetchBestSellingProducts();
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Performans için durdur
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        const sliderElement = document.querySelector('.product-slider-container');
+        if (sliderElement) observer.observe(sliderElement);
     }, []);
 
     const settings = {
@@ -33,7 +48,7 @@ function Productslider() {
     };
 
     return (
-        <Container className="product-slider-container">
+        <Container className="product-slider-container hidden">
             <h1 className="product-slider-heading">Çok Satanlar</h1>
             <Slider {...settings} className='slider'>
                 {cards.map((card) => {

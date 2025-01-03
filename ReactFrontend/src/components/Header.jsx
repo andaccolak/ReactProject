@@ -42,12 +42,12 @@ function Header() {
 
     return (
         <div>
-            <div onClick={() => handleNavItemClick("/")}>
-                <img className="logo" src="./src/images/ep.png" alt="Logo" />
-            </div>
+
 
             <div className="navbar flex-row-navbar">
                 <div className="navbar-links flex-row">
+                    <img style={{ marginTop: '13px' }} onClick={() => handleNavItemClick("/")} className="logo" src="./src/images/logo2.png" alt="Logo" />
+
                     <p onClick={() => handleNavItemClick("/")} className="navbar-link">Anasayfa</p>
                     <p onClick={() => handleNavItemClick("/products")} className="navbar-link">Ürünler</p>
                     <p onClick={() => handleNavItemClick("/About")} className="navbar-link">Hakkımızda</p>
@@ -102,23 +102,23 @@ function Header() {
                         }}
                     >
                         <TextField
-                            style={{ color: 'white', fontSize: '20px' }}
+                            style={{ color: 'black', fontSize: '20px' }}
                             id="standard-basic"
                             label="Ürün Ara.."
                             variant="standard"
                             value={searchTerm}
                             onChange={handleSearchChange}
                             InputProps={{
-                                style: { color: 'white' }
+                                style: { color: 'black' }
                             }}
                             InputLabelProps={{
-                                style: { color: 'white' }
+                                style: { color: 'black' }
                             }}
                         />
                     </Box>
 
                     <MdAccountCircle
-                        style={{ fontSize: '25px', cursor: 'pointer' }}
+                        style={{ color: 'rgb(69, 69, 87)', fontSize: '25px', cursor: 'pointer' }}
                         onClick={() => handleNavItemClick("/register")}
                     />
 
@@ -132,7 +132,7 @@ function Header() {
                         badgeContent={products.length}
                         color="warning"
                     >
-                        <BsBasket2Fill style={{ fontSize: '25px' }} />
+                        <BsBasket2Fill style={{ color: 'rgb(74, 74, 103)', fontSize: '25px' }} />
                     </Badge>
                 </div>
             </div>
