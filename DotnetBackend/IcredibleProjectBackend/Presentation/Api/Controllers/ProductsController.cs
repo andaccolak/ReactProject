@@ -15,7 +15,14 @@ public class ProductsController : ControllerBase
     private readonly GetBestSellerProductQueryHandler _getBestSellerProductQueryHandler;
     private readonly GetSimilarProductsQueryHandler _getSimilarProductsQueryHandler;
 
-    public ProductsController(CreateProductCommandHandler createProductCommandHandler, DeleteProductCommandHandler deleteProductCommandHandler, UpdateProductCommandHandler updateProductCommandHandler, GetProductQueryHandler getProductQueryHandler, GetProductByIdQueryHandler getProductByIdQueryHandler, GetBestSellerProductQueryHandler getBestSellerProductQueryHandler, GetSimilarProductsQueryHandler getSimilarProductsQueryHandler)
+    public ProductsController(
+        CreateProductCommandHandler createProductCommandHandler,
+        DeleteProductCommandHandler deleteProductCommandHandler,
+        UpdateProductCommandHandler updateProductCommandHandler,
+        GetProductQueryHandler getProductQueryHandler,
+        GetProductByIdQueryHandler getProductByIdQueryHandler,
+        GetBestSellerProductQueryHandler getBestSellerProductQueryHandler,
+        GetSimilarProductsQueryHandler getSimilarProductsQueryHandler)
     {
         _createProductCommandHandler = createProductCommandHandler;
         _deleteProductCommandHandler = deleteProductCommandHandler;
@@ -41,7 +48,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateProduct(CreateProductCommand command)
+    public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
     {
         await _createProductCommandHandler.Handle(command);
         return Ok("Ürün Eklendi");
@@ -55,7 +62,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<IActionResult> UpdateProduct(UpdateProductCommand command)
+    public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductCommand command)
     {
         await _updateProductCommandHandler.Handle(command);
         return Ok("Ürün Güncellendi");
@@ -67,10 +74,28 @@ public class ProductsController : ControllerBase
         var values = _getBestSellerProductQueryHandler.Handle();
         return Ok(values);
     }
+
     [HttpGet("GetSimilarProducts/{categoryId}")]
-    public  IActionResult GetSimilarProducts(int categoryId)
+    public IActionResult GetSimilarProducts(int categoryId)
     {
-        var values =  _getSimilarProductsQueryHandler.Handle(categoryId);
+        var values = _getSimilarProductsQueryHandler.Handle(categoryId);
         return Ok(values);
     }
+
+    [HttpPost("upload")]
+    public async Task<IActionResult> UploadImage([FromForm] IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+        {
+            return BadRequest("Yüklenen dosya bulunamadı.");
+        }
+
+        var fileName = System.IO.Path.GetFileName(file.FileName);
+        
+
+        var fileUrl = $"../src/Images/{fileName}";
+        return Ok(new { url = fileUrl });
+    }
 }
+//  ../src/Images/product-2.jpg
+//   C:/Users/colak/Desktop/Front/ReactFrontend/src/Images/bg-3.jpg

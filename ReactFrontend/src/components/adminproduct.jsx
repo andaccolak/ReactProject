@@ -3,7 +3,20 @@ import '../css/admin.css';
 import '../app.css';
 
 function adminproduct({ product, onDeleteSuccess }) {
-    const { productID, productName, price, description, image, categoryId, categoryName, brand, salesType, quantity, sales } = product;
+    const {
+        productID,
+        productName,
+        price,
+        description,
+        image,
+        categoryId,
+        categoryName,
+        brand,
+        salesType,
+        quantity,
+        sales
+    } = product;
+
     const [isEditing, setIsEditing] = useState(false);
     const [updatedProduct, setUpdatedProduct] = useState({
         productName,
@@ -16,9 +29,8 @@ function adminproduct({ product, onDeleteSuccess }) {
         salesType,
         sales,
         quantity
-
     });
-    const shortTitle = productName.split(' ').slice(0, 3).join(' ');
+
     const handleDelete = async () => {
         const confirmDelete = window.confirm(`${productName} adlı ürünü silmek istediğinize emin misiniz?`);
         if (confirmDelete) {
@@ -30,17 +42,14 @@ function adminproduct({ product, onDeleteSuccess }) {
                     alert('Ürün başarıyla silindi.');
                     if (onDeleteSuccess) {
                         onDeleteSuccess(productID);
-                        window.location.reload();
                     }
+                    window.location.reload();
                 } else {
                     alert('Ürün silinirken bir hata oluştu.');
                 }
             } catch (error) {
                 console.error('Silme işlemi sırasında bir hata oluştu:', error);
                 alert('Silme işlemi başarısız oldu.');
-            }
-            finally {
-                window.location.reload();
             }
         }
     };
@@ -62,7 +71,6 @@ function adminproduct({ product, onDeleteSuccess }) {
                 alert('Ürün başarıyla güncellendi.');
                 setIsEditing(false);
                 window.location.reload();
-
             } else {
                 alert('Ürün güncellenirken bir hata oluştu.');
             }
@@ -89,8 +97,8 @@ function adminproduct({ product, onDeleteSuccess }) {
                     </div>
                     <div className="title">{productName}</div>
                     <div className="price">${price}</div>
-                    <div className="quantity"> {quantity}</div>
-                    <div className="sales"> {sales}</div>
+                    <div className="quantity">{quantity}</div>
+                    <div className="sales">{sales}</div>
                     <div>
                         <button className="button-delete" onClick={handleDelete}>
                             Sil

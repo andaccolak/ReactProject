@@ -12,6 +12,7 @@ function AdminPageproduct() {
     const productsPerPage = 16;
 
     const [showForm, setShowForm] = useState(false);
+
     const [newProduct, setNewProduct] = useState({
         productName: '',
         price: '',
@@ -23,7 +24,6 @@ function AdminPageproduct() {
         salesType: '',
         sales: '',
         quantity: '',
-
     });
 
     useEffect(() => {
@@ -39,6 +39,61 @@ function AdminPageproduct() {
         setNewProduct((prev) => ({ ...prev, [name]: value }));
     };
 
+    const [dragActive, setDragActive] = useState(false);
+
+    const handleDragOver = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragActive(true);
+    };
+
+    const handleDragLeave = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragActive(false);
+    };
+
+    const handleDrop = async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragActive(false);
+
+        const file = e.dataTransfer.files[0];
+        if (file) {
+            await uploadImageToServer(file);
+        }
+    };
+
+    const handleFileChange = async (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            await uploadImageToServer(file);
+        }
+    };
+
+    const uploadImageToServer = async (file) => {
+        try {
+            const formData = new FormData();
+            formData.append("file", file);
+
+            const response = await fetch('https://localhost:7240/api/Products/upload', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) {
+                throw new Error('Dosya yüklenirken bir hata oluştu.');
+            }
+
+            const data = await response.json();
+            setNewProduct((prev) => ({ ...prev, image: data.url }));
+
+        } catch (error) {
+            console.error(error);
+            alert('Resim yüklenemedi!');
+        }
+    };
+    // Ürün ekleme
     const handleAddProduct = async () => {
         try {
             const response = await fetch('https://localhost:7240/api/Products', {
@@ -82,12 +137,10 @@ function AdminPageproduct() {
         } catch (error) {
             console.error('Ürün ekleme sırasında bir hata oluştu:', error);
             alert('Ürün ekleme işlemi başarısız oldu.');
-        }
-        finally {
+        } finally {
             window.location.reload();
         }
     };
-
 
     return (
         <div style={{ marginLeft: '80px' }}>
@@ -112,17 +165,12 @@ function AdminPageproduct() {
             </div>
 
             {showForm && (
-                <div className='add-product-form'
-                    style={{
-
-                    }}
-                >
+                <div className='add-product-form'>
                     <h2 style={{ marginBottom: '10px' }}>Yeni Ürün Ekle</h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '10px' }}>
                         <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
                             <label>Ürün Adı:<br /></label>
                             <input
-
                                 type="text"
                                 name="productName"
                                 value={newProduct.productName}
@@ -150,16 +198,44 @@ function AdminPageproduct() {
                                 style={{ width: '80%', padding: '5px', margin: '5px 0' }}
                             />
                         </div>
+
+
                         <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Görsel:<br /></label>
+                            <label>Görsel (Sürükle & Bırak veya Tıkla):<br /></label>
+                            <div
+                                onDragOver={handleDragOver}
+                                onDragLeave={handleDragLeave}
+                                onDrop={handleDrop}
+                                style={{
+                                    width: '80%',
+                                    height: '80px',
+                                    border: '2px dashed #ccc',
+                                    borderRadius: '5px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    margin: '5px 0',
+                                    backgroundColor: dragActive ? '#f0fff0' : 'transparent',
+                                    cursor: 'pointer',
+                                }}
+                                onClick={() => {
+                                    document.getElementById('imageFileInput').click();
+                                }}
+                            >
+                                {newProduct.image
+                                    ? <img src={newProduct.image} alt="preview" style={{ maxHeight: '70px' }} />
+                                    : <p style={{ color: '#555' }}>Dosyayı buraya bırakın veya tıklayın</p>
+                                }
+                            </div>
                             <input
-                                type="text"
-                                name="image"
-                                value={newProduct.image}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                id="imageFileInput"
+                                type="file"
+                                style={{ display: 'none' }}
+                                accept="image/*"
+                                onChange={handleFileChange}
                             />
                         </div>
+
                         <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
                             <label>CategoryId:<br /></label>
                             <input
@@ -220,11 +296,7 @@ function AdminPageproduct() {
                                 style={{ width: '80%', padding: '5px', margin: '5px 0' }}
                             />
                         </div>
-
-
                     </div>
-
-
 
                     <button
                         onClick={handleAddProduct}

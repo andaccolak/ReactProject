@@ -173,3 +173,4 @@ C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Presentation\
 C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Presentation\Api\obj\Debug\net8.0\ref\Api.dll
 C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Presentation\Api\bin\Debug\net8.0\Application.dll
 C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Presentation\Api\bin\Debug\net8.0\Application.pdb
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Presentation\Api\bin\Debug\net8.0\Api.staticwebassets.runtime.json

@@ -14,11 +14,28 @@ function Header() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { products } = useSelector((store) => store.basket);
+
     const [searchTerm, setSearchTerm] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    const [scrolled, setScrolled] = useState(false);
+
     useEffect(() => {
         setSearchTerm('');
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     const handleSearchChange = (e) => {
@@ -44,9 +61,15 @@ function Header() {
         <div>
 
 
-            <div className="navbar flex-row-navbar">
-                <div className="navbar-links flex-row">
-                    <img style={{ marginTop: '13px' }} onClick={() => handleNavItemClick("/")} className="logo" src="./src/images/logo2.png" alt="Logo" />
+            <div className={`navbar flex-row-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+                <div className="navbar-links">
+                    <img
+                        style={{ marginTop: '13px' }}
+                        onClick={() => handleNavItemClick("/")}
+                        className="logo"
+                        src="./src/images/logo2.png"
+                        alt="Logo"
+                    />
 
                     <p onClick={() => handleNavItemClick("/")} className="navbar-link">Anasayfa</p>
                     <p onClick={() => handleNavItemClick("/products")} className="navbar-link">Ürünler</p>
