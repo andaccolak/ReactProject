@@ -8,7 +8,7 @@ function ContactPage() {
     const space = '  ';
 
     return (
-        <div className="contact-page">
+        <div>
             <h1 className="contact-page-title">İletişim</h1>
             <div className="contact-container">
                 <div className="contact-form-container">

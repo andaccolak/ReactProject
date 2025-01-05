@@ -6,6 +6,9 @@ import { getAllProduct } from '../redux/slices/productSlice';
 import Category from '../components/Category';
 
 function ProductsPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const dispatch = useDispatch();
     const { filteredProducts, loading } = useSelector((state) => state.product);
     const [currentPage, setCurrentPage] = useState(1);

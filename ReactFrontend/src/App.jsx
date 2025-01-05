@@ -36,10 +36,10 @@ function App() {
           products && products.map((product) => {
             return (
               <div key={product.productID}>
-                <div onClick={() => {
-                  navigate(`/product-detail/${product.productID}`);
-                }} className='flex-row' style={{ padding: '20px', cursor: 'pointer' }}>
-                  <img style={{ marginRight: '5px' }} src={product.image} width={50} height={50} />
+                <div className='flex-row' style={{ padding: '20px', cursor: 'pointer' }}>
+                  <img onClick={() => {
+                    navigate(`/product-detail/${product.productID}`);
+                  }} style={{ marginRight: '5px' }} src={product.image} width={50} height={50} />
                   <p style={{ width: '320px', marginRight: '5px', color: 'black' }}>{product.productName} <br />
                     Adet : {product.count}</p>
                   <p style={{ fontWeight: 'bold', marginRight: '10px', width: '60px' }}>{product.price}TL</p>

@@ -11,7 +11,7 @@ function AdminPageproduct() {
     const [currentPage] = useState(1);
     const productsPerPage = 16;
 
-    const [showForm, setShowForm] = useState(false); // Form görünürlüğünü kontrol eden state
+    const [showForm, setShowForm] = useState(false);
     const [newProduct, setNewProduct] = useState({
         productName: '',
         price: '',

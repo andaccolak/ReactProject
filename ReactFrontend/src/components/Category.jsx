@@ -5,22 +5,36 @@ import { getAllProduct, setProducts } from "../redux/slices/productSlice";
 import "../css/category.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useLocation } from "react-router-dom";
 
 function Category() {
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [allProducts, setAllProducts] = useState([]);
     const dispatch = useDispatch();
+    const location = useLocation();
 
+    // 1) Kategorileri çek
     useEffect(() => {
         CategoryService.getAllCategories()
             .then((data) => setCategories(data))
             .catch((error) => console.error("Kategori çekme işlemi başarısız oldu:", error));
 
-        dispatch(getAllProduct())
-            .then((response) => setAllProducts(response.payload))
+        dispatch(getAllProduct()).then((response) => setAllProducts(response.payload));
     }, [dispatch]);
 
+    // 2) URL query parametresini oku (örn. ?category=Kıyafet)
+    useEffect(() => {
+        const searchParams = new URLSearchParams(location.search);
+        const categoryParam = searchParams.get("category");
+
+        // Eğer query paramda bir category gelmişse, setSelectedCategory ile ayarla
+        if (categoryParam) {
+            setSelectedCategory(categoryParam);
+        }
+    }, [location.search]);
+
+    // 3) Seçili kategoriye göre ürünleri filtrele
     useEffect(() => {
         if (selectedCategory === null) {
             dispatch(setProducts(allProducts));
@@ -32,10 +46,10 @@ function Category() {
         }
     }, [selectedCategory, allProducts, dispatch]);
 
+    // 4) Kategori butonlarına tıklanınca state’i güncelle
     const handleButtonClick = (categoryName) => {
-        setSelectedCategory((prevCategory) =>
-            prevCategory === categoryName ? null : categoryName
-        );
+        // Eğer zaten bu kategori aktifse, tıklayınca geri null yapıyoruz (sıfırlama davranışı).
+        setSelectedCategory((prevCategory) => (prevCategory === categoryName ? null : categoryName));
     };
 
     return (

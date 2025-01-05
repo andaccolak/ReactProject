@@ -7,7 +7,7 @@ import { MdOutlineContactSupport } from "react-icons/md";
 
 function AboutPage() {
     return (
-        <div className='about-page'>
+        <div >
             <h1 className='about-page-title'>Hakkımızda</h1>
             <div className='about-us'>
                 <div className='about-us-title'><h1>Biz Kimiz?</h1></div>

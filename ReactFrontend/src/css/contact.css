@@ -8,13 +8,21 @@
 }
 
 .contact-page-title {
+    background:
+        url("./src/images/products.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b2b6e0;
-    width: 100%;
-    height: 100px;
-    color: white;
+    width: 90%;
+    font-size: 70px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    color: rgb(14, 10, 10);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -26,12 +34,16 @@
     height: 1000px;
     background-color: #7e82b5;
     border-radius: 10px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 .contact-form-container {
     display: flex;
     gap: 10px;
+
 
 }
 

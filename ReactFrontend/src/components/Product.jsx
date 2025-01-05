@@ -14,11 +14,11 @@ function Product({ product }) {
     }}>
       <img className='image' src={image} alt="" />
       <div>
-        <p style={{ color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '18px', margin: '35px' }}>{shortTitle}</p>
-        <h3 className='cards-price'>{price} ₺</h3>
+        <p style={{ color: 'black', textAlign: 'left', height: '20px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '15px', marginTop: '35px' }}>{shortTitle}</p>
+        <h1 className='cards-price'>{price} ₺</h1>
       </div>
       <div className='flex-row'>
-        <button onClick={() => navigate("/product-details/" + productID)} className='details-button'>Detayına Git</button>
+        <button onClick={() => navigate("/product-details/" + productID)} className='details-button'>Ürünü İncele</button>
       </div>
     </div>
   );

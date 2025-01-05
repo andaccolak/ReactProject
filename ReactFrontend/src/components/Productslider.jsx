@@ -26,7 +26,7 @@ function Productslider() {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Performans için durdur
+                        observer.unobserve(entry.target);
                     }
                 });
             },
@@ -57,7 +57,7 @@ function Productslider() {
                         <Card key={card.productID} className='card'>
                             <img className='image' src={card.image} alt={card.productName} />
                             <div>
-                                <p style={{ margin: '-5px', color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '20px' }}>{shortTitle}</p>
+                                <p style={{ margin: '-5px', color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '15px' }}>{shortTitle}</p>
                                 <h3 className='card-price'>{card.price} ₺ / Kg</h3>
                             </div>
                             <div className='flex-row'>
