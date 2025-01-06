@@ -43,9 +43,7 @@ function Header() {
         dispatch(filterProducts(e.target.value));
     };
 
-    const handleCategoryClick = (categoryName) => {
-        navigate(`/products?category=${categoryName}`);
-    };
+
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -63,68 +61,19 @@ function Header() {
 
             <div className={`navbar flex-row-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
                 <div className="navbar-links">
-                    <img
-                        style={{ marginTop: '13px' }}
-                        onClick={() => handleNavItemClick("/")}
-                        className="logo"
-                        src="./src/images/logo2.png"
-                        alt="Logo"
-                    />
-
-                    <p onClick={() => handleNavItemClick("/")} className="navbar-link">Anasayfa</p>
-                    <p onClick={() => handleNavItemClick("/products")} className="navbar-link">Ürünler</p>
-                    <p onClick={() => handleNavItemClick("/About")} className="navbar-link">Hakkımızda</p>
-                    <p onClick={() => handleNavItemClick("/Contact")} className="navbar-link">İletişim</p>
-
-                    <div className="nav-item">
-                        <p className="navbar-link" onClick={toggleDropdown}>
-                            Admin
-                        </p>
-                        {dropdownOpen && (
-                            <div className="dropdown-menu">
-                                <a
-                                    className="dropdown-item"
-                                    onClick={() => handleNavItemClick("/Admin-Product")}
-                                >
-                                    Ürün Yönetim
-                                </a>
-                                <a
-                                    className="dropdown-item"
-                                    onClick={() => handleCategoryClick('Kategori2')}
-                                >
-                                    Kullanıcı Yönetim
-                                </a>
-                                <a
-                                    className="dropdown-item"
-                                    href="#!"
-                                    onClick={() => handleCategoryClick('Kategori3')}
-                                >
-                                    Destek Talepleri
-                                </a>
-                                <a
-                                    className="dropdown-item"
-                                    href="#!"
-                                    onClick={() => handleCategoryClick('Kategori4')}
-                                >
-                                    Sipariş Yönetim
-                                </a>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                <div className="navbar-icons">
                     <Box
                         sx={{
                             '& > :not(style)': {
                                 m: 1,
-                                width: '15ch',
+                                width: '35ch',
                                 color: 'white',
-                                marginBottom: '20px'
+                                marginBottom: '10px',
+                                userSelect: 'none',
+
                             }
                         }}
                     >
-                        <TextField
+                        <TextField className='searchbar'
                             style={{ color: 'black', fontSize: '20px' }}
                             id="standard-basic"
                             label="Ürün Ara.."
@@ -139,11 +88,28 @@ function Header() {
                             }}
                         />
                     </Box>
-
-                    <MdAccountCircle
-                        style={{ color: 'rgb(69, 69, 87)', fontSize: '25px', cursor: 'pointer' }}
-                        onClick={() => handleNavItemClick("/register")}
+                    <img
+                        onClick={() => handleNavItemClick("/")}
+                        className="logo"
+                        src="./src/images/logo2.png"
+                        alt="Logo"
                     />
+
+
+                </div>
+
+                <div className="navbar-icons">
+                    <p onClick={() => handleNavItemClick("/register")} className='icon-p'>Giriş Yap</p>
+                    <MdAccountCircle
+                        style={{ color: 'rgb(0, 0, 0)', fontSize: '35px', cursor: 'pointer' }}
+
+                    />
+
+                    <p onClick={() => {
+                        setSearchTerm('');
+                        dispatch(filterProducts(''));
+                        dispatch(setDrawer());
+                    }} className='icon-p'>Sepetim</p>
 
                     <Badge
                         onClick={() => {
@@ -151,13 +117,55 @@ function Header() {
                             dispatch(filterProducts(''));
                             dispatch(setDrawer());
                         }}
-                        style={{ padding: '3px', cursor: 'pointer' }}
+                        style={{ padding: '3px', cursor: 'pointer', userSelect: 'none' }}
                         badgeContent={products.length}
                         color="warning"
                     >
-                        <BsBasket2Fill style={{ color: 'rgb(74, 74, 103)', fontSize: '25px' }} />
+                        <BsBasket2Fill style={{ color: 'rgb(0, 0, 0)', fontSize: '35px' }} />
                     </Badge>
                 </div>
+            </div>
+            <div className={`alt-navbar ${scrolled ? "alt-navbar-scrolled" : ""}`}>
+                <p onClick={() => handleNavItemClick("/products")} className="navbar-link">Ürünler</p>
+                <p onClick={() => handleNavItemClick("/About")} className="navbar-link">Hakkımızda</p>
+                <p onClick={() => handleNavItemClick("/Contact")} className="navbar-link">İletişim</p>
+
+                <div className="nav-item">
+                    <p style={{ marginTop: '100px' }} className="navbar-link" onClick={toggleDropdown}>
+                        Admin
+                    </p>
+                    {dropdownOpen && (
+                        <div className="dropdown-menu">
+                            <a
+                                className="dropdown-item"
+                                onClick={() => handleNavItemClick("/Admin-Product")}
+                            >
+                                Ürün Yönetim
+                            </a>
+                            <a
+                                className="dropdown-item"
+                                onClick={() => handleCategoryClick('Kategori2')}
+                            >
+                                Kullanıcı Yönetim
+                            </a>
+                            <a
+                                className="dropdown-item"
+                                href="#!"
+                                onClick={() => handleCategoryClick('Kategori3')}
+                            >
+                                Destek Talepleri
+                            </a>
+                            <a
+                                className="dropdown-item"
+                                href="#!"
+                                onClick={() => handleCategoryClick('Kategori4')}
+                            >
+                                Sipariş Yönetim
+                            </a>
+                        </div>
+                    )}
+                </div>
+
             </div>
         </div>
     );

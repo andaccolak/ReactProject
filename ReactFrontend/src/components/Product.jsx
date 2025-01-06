@@ -14,7 +14,7 @@ function Product({ product }) {
     }}>
       <img className='image' src={image} alt="" />
       <div>
-        <p style={{ color: 'black', textAlign: 'left', height: '20px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '15px', marginTop: '35px' }}>{shortTitle}</p>
+        <p style={{ color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '18px', marginTop: '35px' }}>{shortTitle}</p>
         <h1 className='cards-price'>{price} ₺</h1>
       </div>
       <div className='flex-row'>

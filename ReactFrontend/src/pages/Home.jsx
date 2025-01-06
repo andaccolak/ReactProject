@@ -6,7 +6,6 @@ import '../css/home.css';
 
 function Home() {
   const navigate = useNavigate();
-  // Kategoriye tıklandığında ilgili sayfaya yönlendir
   const handleCategoryClick = (categoryName) => {
     navigate(`/products?category=${categoryName}`);
   };

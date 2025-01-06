@@ -13,33 +13,45 @@
     height: 100px;
 }
 
+.list-p {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .title {
     width: 1000px;
     height: 50px;
     padding: 12px;
+    font-weight: 800;
     background-color: #fff;
     border-radius: 15px;
     font-size: 15px;
     text-align: center;
+    font-family: sans-serif;
 }
 
 .price {
     width: 30%;
     height: 50px;
     padding: 12px;
+    font-size: 40px;
     background-color: #fff;
     border-radius: 15px;
     text-align: center;
+    font-family: sans-serif;
 
 }
 
 .quantity {
     width: 30%;
     height: 50px;
+    font-size: 40px;
     padding: 12px;
     background-color: #fff;
     border-radius: 15px;
     text-align: center;
+    font-family: sans-serif;
 
 }
 
@@ -50,16 +62,19 @@
     align-items: center;
     height: 150px;
     gap: 10px;
-    background-color: rgb(57, 52, 57);
+    background-color: #757683;
 }
 
 .sales {
     width: 30%;
     height: 50px;
+    font-size: 40px;
     padding: 12px;
-    background-color: #393333;
+    background-color: #fbfbfb;
     border-radius: 15px;
-    color: white;
+    font-family: sans-serif;
+
+    color: rgb(7, 7, 7);
     text-align: center;
 
 }
@@ -75,6 +90,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    cursor: pointer;
     background-color: rgb(212, 110, 110);
     color: white;
 }
@@ -90,6 +106,7 @@
     flex-direction: column;
     gap: 10px;
     width: 100px;
+    cursor: pointer;
     height: 30px;
     margin: 4px;
     font-size: 20px;
@@ -110,9 +127,9 @@
     display: flex;
     flex-direction: row;
     gap: 105px;
-    width: 90%;
-    margin-left: 15px;
-    background-color: #2d2b2b;
+    width: 95%;
+    margin-left: 0px;
+    background-color: #757683;
     border-radius: 15px;
 }
 

@@ -1,8 +1,8 @@
 .logo {
-    width: 150px;
-    height: 40px;
+    width: 250px;
+    height: 90px;
     cursor: pointer;
-    margin-left: -10px;
+    margin-left: 130px;
     align-self: flex-start;
     color: rgb(107, 107, 244);
     user-select: none;
@@ -10,10 +10,12 @@
 
 
 .navbar {
-    background-color: #e3e1e1;
+
+    background-color: #fdfafa;
     border-radius: 10px;
     width: 90%;
     max-width: 1400px;
+    height: 100px;
     margin: 0 auto;
     padding: 0 20px;
     align-items: center;
@@ -23,14 +25,58 @@
     position: fixed;
     left: 0;
     right: 0;
-    margin-top: -80px;
-    transition: margin-top 0.3s ease;
+    border: 1px solid black;
+    margin-top: -190px;
     z-index: 999;
+
+    .logo {
+        transform: scale(1);
+        margin-top: -45px;
+    }
 }
 
-.navbar.navbar-scrolled {
-    margin-top: -100px;
-    opacity: 0.8;
+.navbar-scrolled {
+    transition: height 0.5s ease;
+    margin-top: -180px;
+    opacity: 1;
+    transition: height 1s ease;
+    height: 60px;
+
+    .navbar-icons {
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+        margin-top: -1px;
+    }
+
+    .searchbar {
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+        margin-top: -1px;
+        user-select: none;
+    }
+
+
+
+    .logo {
+        transition: transform 0.1s ease;
+        transform: scale(0.6);
+        margin-top: -40px;
+    }
+
+
+}
+
+.icon-p {
+    user-select: none;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 1px;
+}
+
+.icon-p:hover {
+    font-weight: 900;
 }
 
 .navbar:hover {
@@ -48,14 +94,79 @@
     flex-direction: row;
     align-items: center;
     margin-left: 95px;
+    height: 5px;
 }
+
+.alt-navbar {
+    background-color: #5e6cc4f6;
+    opacity: 1;
+    height: 130px;
+    gap: 210px;
+    border-radius: 10px;
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: margin-top 0.1s ease;
+    margin-top: -180px;
+    z-index: 998;
+    max-width: 1400px;
+
+}
+
+.alt-navbar-scrolled {
+    margin-top: -160px;
+    height: 80px;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+
+    .navbar-link {
+        margin-top: 50px;
+    }
+
+    .nav-item {
+        margin-top: -50px;
+    }
+
+
+
+}
+
+.navbar-link-admin {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+    font-size: 15px;
+    opacity: 0.5;
+    margin-left: 35px;
+    margin-top: 455px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.alt-navbar:hover {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+
 
 .navbar-link {
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding: 0 20px;
-    font-size: 20px;
+    font-size: 15px;
     opacity: 0.5;
+    margin-left: 35px;
+    margin-top: 95px;
+    margin-bottom: 20px;
     font-weight: 900;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
@@ -111,7 +222,7 @@
 
 .navbar-icons {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     color: white;
     align-items: center;
     flex-wrap: nowrap;
@@ -180,7 +291,7 @@
 }
 
 .home-btn {
-    background-color: #7d857d;
+    background-color: #3340d1d7;
     color: white;
     padding: 16px 20px;
     margin-left: 300px;

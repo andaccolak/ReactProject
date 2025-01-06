@@ -93,7 +93,6 @@ function AdminPageproduct() {
             alert('Resim yüklenemedi!');
         }
     };
-    // Ürün ekleme
     const handleAddProduct = async () => {
         try {
             const response = await fetch('https://localhost:7240/api/Products', {
@@ -145,7 +144,7 @@ function AdminPageproduct() {
     return (
         <div style={{ marginLeft: '80px' }}>
             <div className='admin-page-title-div'>
-                <h1 className='admin-page-title'>Ürün Yönetimi</h1>
+                <h1 style={{ fontSize: '50px', fontWeight: '900', color: 'black' }} className='admin-page-title'>Ürün Yönetimi</h1>
                 <button
                     style={{
                         alignSelf: 'center',
@@ -155,7 +154,8 @@ function AdminPageproduct() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        gap: '5px',
+                        gap: '5px', cursor: 'pointer'
+
                     }}
                     onClick={() => setShowForm(!showForm)}
                 >
@@ -315,12 +315,12 @@ function AdminPageproduct() {
             )}
 
             <div className='list'>
-                <p style={{ marginLeft: '60px' }}>Görsel</p>
-                <p style={{ marginLeft: '100px' }}>İsim</p>
-                <p style={{ marginLeft: '80px' }}>Fiyat</p>
-                <p style={{ marginLeft: '-20px' }}>Stok</p>
-                <p style={{ marginLeft: '-30px' }}>Satış</p>
-                <p style={{ marginLeft: '-30px' }}>İşlemler</p>
+                <p className='list-p' style={{ marginLeft: '120px' }}>Görsel</p>
+                <p className='list-p' style={{ marginLeft: '100px' }}>İsim</p>
+                <p className='list-p' style={{ marginLeft: '120px' }}>Fiyat</p>
+                <p className='list-p' style={{ marginLeft: '25px' }}>Stok</p>
+                <p className='list-p' style={{ marginLeft: '10px' }}>Satış</p>
+                <p className='list-p' style={{ marginLeft: '-30px' }}>İşlemler</p>
             </div>
 
             <div className='product-pages'>
