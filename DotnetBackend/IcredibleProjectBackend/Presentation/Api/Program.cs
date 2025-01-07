@@ -22,6 +22,9 @@ builder.Services.AddScoped<GetSimilarProductsQueryHandler>();
 
 builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
 builder.Services.AddScoped<GetCategoryQueryHandler>();
+builder.Services.AddScoped<CreateCategoryCommandHandler>();
+builder.Services.AddScoped<DeleteCategoryCommandHandler>();
+builder.Services.AddScoped<UpdateCategoryCommandHandler>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
