@@ -9,6 +9,9 @@ import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import '../css/header.css';
+import LoginModal from '../modal/loginModal';
+import RegisterModal from '../modal/registerModal';
+import Dialog from '@mui/material/Dialog';
 
 function Header() {
     const dispatch = useDispatch();
@@ -17,6 +20,8 @@ function Header() {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [openLogin, setOpenLogin] = useState(false);
+    const [openRegister, setOpenRegister] = useState(false);
 
     const [scrolled, setScrolled] = useState(false);
 
@@ -99,7 +104,11 @@ function Header() {
                 </div>
 
                 <div className="navbar-icons">
-                    <p onClick={() => handleNavItemClick("/register")} className='icon-p'>Giriş Yap</p>
+                    <div>
+                        <p onClick={() => setOpenRegister(true)} className='icon-p'>Üye Ol</p>
+                        <p onClick={() => setOpenLogin(true)} className='icon-p'>Giriş Yap</p>
+
+                    </div>
                     <MdAccountCircle
                         style={{ color: 'rgb(0, 0, 0)', fontSize: '35px', cursor: 'pointer' }}
 
@@ -167,6 +176,22 @@ function Header() {
                 </div>
 
             </div>
+            <Dialog
+                open={openLogin}
+                onClose={() => setOpenLogin(false)}
+            >
+                <LoginModal closeModal={() => setOpenLogin(false)} />
+            </Dialog>
+
+            {/* Register Modal */}
+            <Dialog
+                open={openRegister}
+                onClose={() => setOpenRegister(false)}
+            >
+                <RegisterModal
+                    closeModal={() => setOpenRegister(false)}
+                />
+            </Dialog>
         </div>
     );
 }

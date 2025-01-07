@@ -87,8 +87,7 @@
               "RelativeToolTip": "Core\\Application\\Interfaces\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T11:21:19.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T11:21:19.058Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "Infastructure\\Persistence\\Repositories\\Repository.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAswDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T11:21:01.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T11:21:01.723Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "Infastructure\\Persistence\\Context\\DatabaseContext.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T11:20:46.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T11:20:46.705Z"
             },
             {
               "$type": "Document",
@@ -126,8 +123,7 @@
               "RelativeToolTip": "Core\\Domain\\Entities\\Product.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAmwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T11:20:37.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T11:20:37.933Z"
             },
             {
               "$type": "Document",
@@ -187,8 +183,7 @@
               "RelativeToolTip": "Presentation\\Api\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAowFgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T00:42:06.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T00:42:06.541Z"
             },
             {
               "$type": "Document",
@@ -212,8 +207,7 @@
               "RelativeToolTip": "Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T00:20:02.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T00:20:02.586Z"
             },
             {
               "$type": "Document",
@@ -225,8 +219,7 @@
               "RelativeToolTip": "Core\\Application\\Interfaces\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T00:19:01.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T00:19:01.968Z"
             }
           ]
         }
