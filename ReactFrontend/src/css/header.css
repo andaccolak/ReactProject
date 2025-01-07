@@ -1,8 +1,8 @@
 .logo {
-    width: 250px;
+    width: 350px;
     height: 90px;
     cursor: pointer;
-    margin-left: 130px;
+    margin-left: 80px;
     align-self: flex-start;
     color: rgb(107, 107, 244);
     user-select: none;
