@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.CQRS.Handlers.ProductHandlers
+namespace Application.Features.CQRS.Handlers.CategoryHandlers
 {
     public class UpdateCategoryCommandHandler
     {

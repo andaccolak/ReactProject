@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProduct } from '../redux/slices/productSlice';
 import { CiCirclePlus } from "react-icons/ci";
+import AdminCategory from '../components/AdminCategory'
 
 function AdminPageproduct() {
     const dispatch = useDispatch();
@@ -142,198 +143,203 @@ function AdminPageproduct() {
     };
 
     return (
-        <div style={{ marginLeft: '80px' }}>
-            <div className='admin-page-title-div'>
-                <h1 style={{ fontSize: '50px', fontWeight: '900', color: 'black' }} className='admin-page-title'>Ürün Yönetimi</h1>
-                <button
-                    style={{
-                        alignSelf: 'center',
-                        fontSize: '10px',
-                        color: 'green',
-                        borderRadius: '10px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '5px', cursor: 'pointer'
-
-                    }}
-                    onClick={() => setShowForm(!showForm)}
-                >
-                    <h1 style={{ fontSize: '20px', margin: 0 }}>Ürün Ekle</h1>
-                    <CiCirclePlus style={{ fontSize: '30px' }} />
-                </button>
+        <div>
+            <div>
+                <AdminCategory />
             </div>
-
-            {showForm && (
-                <div className='add-product-form'>
-                    <h2 style={{ marginBottom: '10px' }}>Yeni Ürün Ekle</h2>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '10px' }}>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Ürün Adı:<br /></label>
-                            <input
-                                type="text"
-                                name="productName"
-                                value={newProduct.productName}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px ' }}
-                            />
-                        </div>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Fiyat:<br /></label>
-                            <input
-                                type="number"
-                                name="price"
-                                value={newProduct.price}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Açıklama:<br /></label>
-                            <textarea
-                                type="text"
-                                name="description"
-                                value={newProduct.description}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-
-
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Görsel (Sürükle & Bırak veya Tıkla):<br /></label>
-                            <div
-                                onDragOver={handleDragOver}
-                                onDragLeave={handleDragLeave}
-                                onDrop={handleDrop}
-                                style={{
-                                    width: '80%',
-                                    height: '80px',
-                                    border: '2px dashed #ccc',
-                                    borderRadius: '5px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    margin: '5px 0',
-                                    backgroundColor: dragActive ? '#f0fff0' : 'transparent',
-                                    cursor: 'pointer',
-                                }}
-                                onClick={() => {
-                                    document.getElementById('imageFileInput').click();
-                                }}
-                            >
-                                {newProduct.image
-                                    ? <img src={newProduct.image} alt="preview" style={{ maxHeight: '70px' }} />
-                                    : <p style={{ color: '#555' }}>Dosyayı buraya bırakın veya tıklayın</p>
-                                }
-                            </div>
-                            <input
-                                id="imageFileInput"
-                                type="file"
-                                style={{ display: 'none' }}
-                                accept="image/*"
-                                onChange={handleFileChange}
-                            />
-                        </div>
-
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>CategoryId:<br /></label>
-                            <input
-                                type="number"
-                                name="categoryId"
-                                value={newProduct.categoryId}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Kategori İsmi:<br /></label>
-                            <input
-                                type="text"
-                                name="categoryName"
-                                value={newProduct.categoryName}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Marka:<br /></label>
-                            <input
-                                type="text"
-                                name="brand"
-                                value={newProduct.brand}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Satış Tipi:<br /></label>
-                            <input
-                                type="text"
-                                name="salesType"
-                                value={newProduct.salesType}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Toplam Satış:<br /></label>
-                            <input
-                                type="text"
-                                name="sales"
-                                value={newProduct.sales}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-                        <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
-                            <label>Stok:<br /></label>
-                            <input
-                                type="text"
-                                name="quantity"
-                                value={newProduct.quantity}
-                                onChange={handleInputChange}
-                                style={{ width: '80%', padding: '5px', margin: '5px 0' }}
-                            />
-                        </div>
-                    </div>
-
+            <div className='admin-products'>
+                <div className='admin-page-title-div'>
+                    <h1 style={{ fontSize: '50px', fontWeight: '900', color: 'black' }} className='admin-page-title'>Ürün Yönetimi</h1>
                     <button
-                        onClick={handleAddProduct}
                         style={{
-                            backgroundColor: 'green',
-                            color: 'white',
-                            padding: '10px',
-                            borderRadius: '5px',
-                            border: 'none',
-                            cursor: 'pointer',
+                            alignSelf: 'center',
+                            fontSize: '10px',
+                            color: 'green',
+                            borderRadius: '10px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '5px', cursor: 'pointer'
+
                         }}
+                        onClick={() => setShowForm(!showForm)}
                     >
-                        Ürünü Ekle
+                        <h1 style={{ fontSize: '20px', margin: 0 }}>Ürün Ekle</h1>
+                        <CiCirclePlus style={{ fontSize: '30px' }} />
                     </button>
                 </div>
-            )}
 
-            <div className='list'>
-                <p className='list-p' style={{ marginLeft: '120px' }}>Görsel</p>
-                <p className='list-p' style={{ marginLeft: '100px' }}>İsim</p>
-                <p className='list-p' style={{ marginLeft: '120px' }}>Fiyat</p>
-                <p className='list-p' style={{ marginLeft: '25px' }}>Stok</p>
-                <p className='list-p' style={{ marginLeft: '10px' }}>Satış</p>
-                <p className='list-p' style={{ marginLeft: '-30px' }}>İşlemler</p>
-            </div>
+                {showForm && (
+                    <div className='add-product-form'>
+                        <h2 style={{ marginBottom: '10px' }}>Yeni Ürün Ekle</h2>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '10px' }}>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Ürün Adı:<br /></label>
+                                <input
+                                    type="text"
+                                    name="productName"
+                                    value={newProduct.productName}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px ' }}
+                                />
+                            </div>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Fiyat:<br /></label>
+                                <input
+                                    type="number"
+                                    name="price"
+                                    value={newProduct.price}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Açıklama:<br /></label>
+                                <textarea
+                                    type="text"
+                                    name="description"
+                                    value={newProduct.description}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
 
-            <div className='product-pages'>
-                <div className='flex-row' style={{ flexWrap: 'wrap', marginTop: '25px' }}>
-                    {currentProducts.length > 0 ? (
-                        currentProducts.map((product) => (
-                            <Product key={product.productID} product={product} />
-                        ))
-                    ) : (
-                        <p style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>
-                            Aradığınız ürün bulunamadı.
-                        </p>
-                    )}
+
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Görsel (Sürükle & Bırak veya Tıkla):<br /></label>
+                                <div
+                                    onDragOver={handleDragOver}
+                                    onDragLeave={handleDragLeave}
+                                    onDrop={handleDrop}
+                                    style={{
+                                        width: '80%',
+                                        height: '80px',
+                                        border: '2px dashed #ccc',
+                                        borderRadius: '5px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        margin: '5px 0',
+                                        backgroundColor: dragActive ? '#f0fff0' : 'transparent',
+                                        cursor: 'pointer',
+                                    }}
+                                    onClick={() => {
+                                        document.getElementById('imageFileInput').click();
+                                    }}
+                                >
+                                    {newProduct.image
+                                        ? <img src={newProduct.image} alt="preview" style={{ maxHeight: '70px' }} />
+                                        : <p style={{ color: '#555' }}>Dosyayı buraya bırakın veya tıklayın</p>
+                                    }
+                                </div>
+                                <input
+                                    id="imageFileInput"
+                                    type="file"
+                                    style={{ display: 'none' }}
+                                    accept="image/*"
+                                    onChange={handleFileChange}
+                                />
+                            </div>
+
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>CategoryId:<br /></label>
+                                <input
+                                    type="number"
+                                    name="categoryId"
+                                    value={newProduct.categoryId}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Kategori İsmi:<br /></label>
+                                <input
+                                    type="text"
+                                    name="categoryName"
+                                    value={newProduct.categoryName}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Marka:<br /></label>
+                                <input
+                                    type="text"
+                                    name="brand"
+                                    value={newProduct.brand}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Satış Tipi:<br /></label>
+                                <input
+                                    type="text"
+                                    name="salesType"
+                                    value={newProduct.salesType}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Toplam Satış:<br /></label>
+                                <input
+                                    type="text"
+                                    name="sales"
+                                    value={newProduct.sales}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
+                            <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
+                                <label>Stok:<br /></label>
+                                <input
+                                    type="text"
+                                    name="quantity"
+                                    value={newProduct.quantity}
+                                    onChange={handleInputChange}
+                                    style={{ width: '80%', padding: '5px', margin: '5px 0' }}
+                                />
+                            </div>
+                        </div>
+
+                        <button
+                            onClick={handleAddProduct}
+                            style={{
+                                backgroundColor: 'green',
+                                color: 'white',
+                                padding: '10px',
+                                borderRadius: '5px',
+                                border: 'none',
+                                cursor: 'pointer',
+                            }}
+                        >
+                            Ürünü Ekle
+                        </button>
+                    </div>
+                )}
+
+                <div className='list'>
+                    <p className='list-p' style={{ marginLeft: '20px' }}>Görsel</p>
+                    <p className='list-p' style={{ marginLeft: '200px' }}>İsim</p>
+                    <p className='list-p' style={{ marginLeft: '220px' }}>Fiyat</p>
+                    <p className='list-p' style={{ marginLeft: '75px' }}>Stok</p>
+                    <p className='list-p' style={{ marginLeft: '80px' }}>Satış</p>
+                    <p className='list-p' style={{ marginLeft: '20px' }}>İşlemler</p>
+                </div>
+
+                <div className='product-pages'>
+                    <div className='flex-row' style={{ flexWrap: 'wrap', marginTop: '25px' }}>
+                        {currentProducts.length > 0 ? (
+                            currentProducts.map((product) => (
+                                <Product key={product.productID} product={product} />
+                            ))
+                        ) : (
+                            <p style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>
+                                Aradığınız ürün bulunamadı.
+                            </p>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
