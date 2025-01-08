@@ -32,15 +32,15 @@ function Home() {
           </div>
         </div>
 
-        <div className="category-card" onClick={() => handleCategoryClick("Takı")}>
+        <div className="category-card" onClick={() => handleCategoryClick("Ayakkabı")}>
           <img src="../src/Images/bg-3.jpg" alt="" />
           <div className="category-overlay">
-            <p className="category-text">Takı</p>
+            <p className="category-text">Ayakkabı</p>
           </div>
         </div>
 
         <div className="category-card" onClick={() => handleCategoryClick("Erkek Moda")}>
-          <img src="../src/Images/bg-4.jpg" alt="" />
+          <img src="../src/Images/emoda.jpg" alt="" />
           <div className="category-overlay">
             <p className="category-text">Erkek Moda</p>
           </div>

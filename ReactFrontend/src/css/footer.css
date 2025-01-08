@@ -3,6 +3,7 @@
     color: #fff;
     text-align: center;
     display: flex;
+    user-select: none;
     margin-bottom: 15px;
     justify-content: space-between;
     border-radius: 10px;

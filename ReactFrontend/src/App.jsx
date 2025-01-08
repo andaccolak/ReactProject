@@ -16,8 +16,29 @@ function App() {
   const navigate = useNavigate();
 
   const { products, drawer, totalAmount } = useSelector((store) => store.basket);
+  const basketAmount = totalAmount.toFixed(2);
   const dispatch = useDispatch();
+  const [showScroll, setShowScroll] = useState(false);
+  const checkScrollTop = () => {
+    if (window.scrollY > 300) {
+      setShowScroll(true);
+    } else {
+      setShowScroll(false);
+    }
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop);
+    return () => {
+      window.removeEventListener("scroll", checkScrollTop);
+    };
+  }, []);
   useEffect(() => {
     dispatch(calculateBasket());
   }, [products]);
@@ -59,7 +80,7 @@ function App() {
             <p style={{
               textAlign: 'center', margin: '25px', backgroundColor: '#7e82b5', color: 'white'
               , padding: '10px', borderRadius: '5px', fontSize: '20px', fontWeight: 'bold'
-            }}> toplam tutar : {totalAmount} ₺</p>
+            }}> toplam tutar : {basketAmount} ₺</p>
           )}
         </div>
         <div>
@@ -80,6 +101,27 @@ function App() {
       </Drawer>
       <Footer />
       {/* </PageContainer> */}
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            backgroundColor: "RGBA(0,123,255,045)",
+            color: "white",
+            border: "none",
+            borderRadius: "50%",
+            width: "50px",
+            height: "50px",
+            fontSize: "20px",
+            cursor: "pointer",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          ↑
+        </button>
+      )}
     </div>
 
   )

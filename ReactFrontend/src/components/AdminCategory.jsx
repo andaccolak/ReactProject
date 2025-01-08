@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import CategoryService from "../services/CategoryService";
-
+import '../css/admin.css'
 const AdminCategory = () => {
     const [categories, setCategories] = useState([]);
-    const [updateCategoryName, setUpdateCategoryName] = useState("");
     const [editingCategoryId, setEditingCategoryId] = useState(null);
+    const [newCategoryName, setNewCategoryName] = useState("");
 
     React.useEffect(() => {
         fetchCategories();
@@ -17,32 +17,32 @@ const AdminCategory = () => {
     };
 
     const handleAddCategory = () => {
-        if (!updateCategoryName.trim()) {
+        if (!newCategoryName.trim()) {
             alert("Kategori adı boş olamaz");
             return;
         }
-        CategoryService.createCategory({ categoryName: updateCategoryName })
+        CategoryService.createCategory({ categoryName: newCategoryName })
             .then(() => {
                 alert("Kategori başarıyla eklendi");
-                setUpdateCategoryName("");
+                setNewCategoryName("");
                 fetchCategories();
             })
             .catch((error) => console.error(error));
     };
 
-    const handleUpdateCategory = () => {
-        if (!updateCategoryName.trim()) {
+    const handleUpdateCategory = (categoryID, newCategoryName) => {
+
+        if (!newCategoryName.trim()) {
             alert("Kategori adı boş olamaz");
             return;
         }
         CategoryService.updateCategory({
-            categoryID: editingCategoryId,
-            categoryName: updateCategoryName,
+            categoryID,
+            categoryName: newCategoryName,
         })
             .then(() => {
                 alert("Kategori başarıyla güncellendi");
                 setEditingCategoryId(null);
-                setUpdateCategoryName("");
                 fetchCategories();
             })
             .catch((error) => console.error(error));
@@ -60,58 +60,57 @@ const AdminCategory = () => {
     };
 
     return (
-        <div>
-            <h1>Admin Panel - Kategoriler</h1>
+        <div style={{ backgroundColor: 'lightgray', border: '3px solid black' }}>
 
-            <div>
-                <h2>Kategori Ekle</h2>
-                <input
+            <div style={{ display: 'flow' }}>
+
+                <input style={{ fontSize: '25px', marginTop: '50px', marginLeft: '20px', borderRadius: '10px' }}
                     type="text"
-                    placeholder="Yeni kategori adı"
-                    value={updateCategoryName}
-                    onChange={(e) => setUpdateCategoryName(e.target.value)}
+                    placeholder="Yeni kategori Ekle"
+                    value={newCategoryName}
+                    onChange={(e) => setNewCategoryName(e.target.value)}
                 />
-                <button onClick={handleAddCategory}>Ekle</button>
+                <br />
+                <button style={{ borderRadius: '10px', fontSize: '25px', margin: '10px', marginLeft: '140px', cursor: 'pointer' }} onClick={handleAddCategory}>Ekle</button>
             </div>
 
             <div>
-                <h2>Kategori Listesi</h2>
-                <ul>
+                <h2 style={{ marginLeft: '95px' }}>Kategori Listesi</h2>
+                <ul className="category-list">
                     {categories.map((category) => (
-                        <li key={category.categoryID}>
-                            {category.categoryName}
+                        <li key={category.categoryID} className="category-item">
+                            {editingCategoryId === category.categoryID ? (
+                                <input
+                                    type="text"
+                                    defaultValue={category.categoryName}
+                                    onBlur={(e) => handleUpdateCategory(category.categoryID, e.target.value)}
+                                    autoFocus
+                                    className="category-input"
+                                />
+                            ) : (
+                                <span className="category-name">{category.categoryName}</span>
+                            )}
                             <button
-                                onClick={() => {
-                                    setEditingCategoryId(category.categoryID);
-                                    setUpdateCategoryName(category.categoryName);
-                                }}
+                                className="category-btn edit-button"
+                                onClick={() =>
+                                    setEditingCategoryId(editingCategoryId === category.categoryID ? null : category.categoryID)
+                                }
                             >
-                                Düzenle
+                                {editingCategoryId === category.categoryID ? "Kaydet" : "Düzenle"}
                             </button>
-                            <button onClick={() => handleDeleteCategory(category.categoryID)}>
-                                Sil
-                            </button>
+                            {editingCategoryId !== category.categoryID && (
+                                <button
+                                    className="category-btn delete-button"
+                                    onClick={() => handleDeleteCategory(category.categoryID)}
+                                >
+                                    Sil
+                                </button>)}
+
                         </li>
                     ))}
                 </ul>
-            </div>
 
-            {editingCategoryId && (
-                <div>
-                    <h2>Kategori Güncelle</h2>
-                    <input
-                        type="text"
-                        placeholder="Yeni kategori adı"
-                        value={updateCategoryName}
-                        onChange={(e) => setUpdateCategoryName(e.target.value)}
-                    />
-                    <button onClick={handleUpdateCategory}>Güncelle</button>
-                    <button onClick={() => {
-                        setEditingCategoryId(null);
-                        setUpdateCategoryName("");
-                    }}>İptal</button>
-                </div>
-            )}
+            </div>
         </div>
     );
 };

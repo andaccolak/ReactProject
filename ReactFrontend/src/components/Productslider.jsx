@@ -58,7 +58,7 @@ function Productslider() {
                             <img className='image' src={card.image} alt={card.productName} />
                             <div>
                                 <p style={{ margin: '-5px', color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '15px' }}>{shortTitle}</p>
-                                <h3 className='card-price'>{card.price} ₺ / Kg</h3>
+                                <h3 className='card-price'>{card.price} ₺ </h3>
                             </div>
                             <div className='flex-row'>
                                 <button onClick={() => navigate("/product-detail/" + card.productID)} className='detail-button'>Detayına Git</button>

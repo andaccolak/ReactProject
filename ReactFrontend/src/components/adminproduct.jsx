@@ -96,7 +96,7 @@ function adminproduct({ product, onDeleteSuccess }) {
                         <img src={image} alt={productName} />
                     </div>
                     <div className="title">{productName}</div>
-                    <div className="price">${price}</div>
+                    <div className="price">{price}₺</div>
                     <div className="quantity">{quantity}</div>
                     <div className="sales">{sales}</div>
                     <div>
