@@ -11,7 +11,7 @@ function AdminPageproduct() {
     const { filteredProducts } = useSelector((state) => state.product);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 16;
+    const productsPerPage = 8;
     const [showForm, setShowForm] = useState(false);
 
     const [newProduct, setNewProduct] = useState({
@@ -122,7 +122,6 @@ function AdminPageproduct() {
                     <div className='add-product-form'>
                         <h2 style={{ marginBottom: '10px' }}>Yeni Ürün Ekle</h2>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '10px' }}>
-                            {/* Form inputları burada */}
                             <button
                                 onClick={handleAddProduct}
                                 style={{

@@ -183,7 +183,6 @@ function Header() {
                 <LoginModal closeModal={() => setOpenLogin(false)} />
             </Dialog>
 
-            {/* Register Modal */}
             <Dialog
                 open={openRegister}
                 onClose={() => setOpenRegister(false)}

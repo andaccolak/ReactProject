@@ -88,41 +88,44 @@ function App() {
 
           {totalAmount > 0 && (
             <button style={{
+
               textAlign: 'center', marginLeft: '180px',
               marginBottom: '50px', backgroundColor: '#7e82b5', color: 'white', cursor: 'pointer'
               , padding: '10px', borderRadius: '5px', fontSize: '20px', fontWeight: 'bold'
-            }}> Ödeme Ekranına Git</button>)}
+            }} onClick={() => navigate('/payment')}> Ödeme Ekranına Git</button>)}
 
           {totalAmount == 0 && (
             <p style={{ margin: '50px' }}>Sepetiniz boş</p>
           )}
         </div>
 
-      </Drawer>
+      </Drawer >
       <Footer />
       {/* </PageContainer> */}
-      {showScroll && (
-        <button
-          onClick={scrollToTop}
-          style={{
-            position: "fixed",
-            bottom: "20px",
-            right: "20px",
-            backgroundColor: "RGBA(0,123,255,045)",
-            color: "white",
-            border: "none",
-            borderRadius: "50%",
-            width: "50px",
-            height: "50px",
-            fontSize: "20px",
-            cursor: "pointer",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          ↑
-        </button>
-      )}
-    </div>
+      {
+        showScroll && (
+          <button
+            onClick={scrollToTop}
+            style={{
+              position: "fixed",
+              bottom: "20px",
+              right: "20px",
+              backgroundColor: "RGBA(0,123,255,045)",
+              color: "white",
+              border: "none",
+              borderRadius: "50%",
+              width: "50px",
+              height: "50px",
+              fontSize: "20px",
+              cursor: "pointer",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            ↑
+          </button>
+        )
+      }
+    </div >
 
   )
 }

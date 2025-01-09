@@ -8,6 +8,8 @@ import ProductsPage from '../pages/ProductsPage';
 import AboutPage from '../pages/AboutPage';
 import ContactPage from '../pages/ContactPage';
 import AdminPageProduct from '../pages/AdminPageProduct';
+import NotFoundPage from '../pages/NotFountPage';
+
 const RouterConfig = () => {
   return (
     <Routes>
@@ -19,6 +21,8 @@ const RouterConfig = () => {
       <Route path='/About' element={<AboutPage />} />
       <Route path='/Contact' element={<ContactPage />} />
       <Route path='Admin-Product' element={<AdminPageProduct />} />
+      <Route path='*' element={<NotFoundPage />} />
+
     </Routes>
   );
 };
