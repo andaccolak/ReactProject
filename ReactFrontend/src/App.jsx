@@ -52,7 +52,7 @@ function App() {
       <Header />
       <RouterConfig />
       <ToastContainer autoClose={2500} />
-      <Drawer onClose={() => dispatch(setDrawer())} className='drawer' sx={{ padding: '20px' }} anchor='right' open={drawer} >
+      <Drawer style={{ userSelect: 'none' }} onClose={() => dispatch(setDrawer())} className='drawer' sx={{ padding: '20px' }} anchor='right' open={drawer} >
         {
           products && products.map((product) => {
             return (
@@ -95,7 +95,7 @@ function App() {
             }} onClick={() => navigate('/payment')}> Ödeme Ekranına Git</button>)}
 
           {totalAmount == 0 && (
-            <p style={{ margin: '50px' }}>Sepetiniz boş</p>
+            <p style={{ margin: '50px', color: 'black', fontSize: '25px' }}>Sepetiniz boş</p>
           )}
         </div>
 
