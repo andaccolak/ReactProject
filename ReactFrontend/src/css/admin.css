@@ -218,6 +218,14 @@
     border-radius: 5px;
 }
 
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
 .add-category-section {
     display: flex;
     gap: 10px;
