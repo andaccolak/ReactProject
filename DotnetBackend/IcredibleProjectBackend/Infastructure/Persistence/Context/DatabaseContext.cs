@@ -1,19 +1,24 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistence.Context
 {
-    public class DatabaseContext:DbContext
+    public class DatabaseContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-        optionsBuilder.UseSqlServer("Server=ANDACCOLAK;initial Catalog=IcredibleBackend;integrated Security=true;TrustServerCertificate=True;");
+            // RDS endpoint + bağlantı bilgileri
+            optionsBuilder.UseSqlServer(
+                "Server=database-1.cxsk828guz60.eu-north-1.rds.amazonaws.com,1433;" +
+                "Initial Catalog=keytedarik;" +
+                "User ID=admin;" +
+                "Password=An8233dac;" +
+                "Encrypt=True;" +
+                "TrustServerCertificate=True;"
+            );
         }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }

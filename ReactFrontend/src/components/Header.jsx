@@ -25,6 +25,8 @@ function Header() {
 
     const [scrolled, setScrolled] = useState(false);
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+
     useEffect(() => {
         setSearchTerm('');
     }, []);
@@ -41,6 +43,15 @@ function Header() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 480);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const handleSearchChange = (e) => {
@@ -68,14 +79,11 @@ function Header() {
                 <div className="navbar-links">
                     <Box
                         sx={{
-                            '& > :not(style)': {
-                                m: 1,
-                                width: '35ch',
-                                color: 'white',
-                                marginBottom: '10px',
-                                userSelect: 'none',
-
-                            }
+                            width: isMobile ? '15ch' : '35ch',
+                            marginBottom: isMobile ? '5px' : '10px',
+                            '@media (max-width: 480px)': {
+                                margin: '0',
+                            },
                         }}
                     >
                         <TextField className='searchbar'
@@ -93,44 +101,34 @@ function Header() {
                             }}
                         />
                     </Box>
-                    <img
-                        onClick={() => handleNavItemClick("/")}
-                        className="logo"
-                        src="./src/images/logo2.png"
-                        alt="Logo"
-                    />
+
 
 
                 </div>
 
+                <img
+                    onClick={() => handleNavItemClick("/")}
+                    className="logo"
+                    src="../src/Images/key-tedarik-logo.svg"
+                    alt="logo"
+                />
+
                 <div className="navbar-icons">
-                    <div>
-                        <p onClick={() => setOpenRegister(true)} className='icon-p'>Üye Ol</p>
-                        <p onClick={() => setOpenLogin(true)} className='icon-p'>Giriş Yap</p>
-
-                    </div>
-                    <MdAccountCircle
-                        style={{ color: 'rgb(0, 0, 0)', fontSize: '35px', cursor: 'pointer' }}
-
-                    />
-
-                    <p onClick={() => {
-                        setSearchTerm('');
-                        dispatch(filterProducts(''));
-                        dispatch(setDrawer());
-                    }} className='icon-p'>Sepetim</p>
-
-                    <Badge
-                        onClick={() => {
-                            setSearchTerm('');
-                            dispatch(filterProducts(''));
-                            dispatch(setDrawer());
-                        }}
-                        style={{ padding: '3px', cursor: 'pointer', userSelect: 'none' }}
+                    {/* {!isMobile && (
+                        <>
+                            <p onClick={() => setOpenRegister(true)} className='icon-p'>Üye Ol</p>
+                            <p onClick={() => setOpenLogin(true)} className='icon-p'>Giriş Yap</p>
+                        </>
+                    )} */}
+                    {/*<MdAccountCircle className='nav-icon'
+                        onClick={() => setOpenLogin(true)}
+                    />*/}
+                    <Badge className='nav-icon-badge'
+                        onClick={() => dispatch(setDrawer())}
                         badgeContent={products.length}
                         color="warning"
                     >
-                        <BsBasket2Fill style={{ color: 'rgb(0, 0, 0)', fontSize: '35px' }} />
+                        <BsBasket2Fill className='nav-icon' />
                     </Badge>
                 </div>
             </div>
@@ -138,43 +136,43 @@ function Header() {
                 <p onClick={() => handleNavItemClick("/products")} className="navbar-link">Ürünler</p>
                 <p onClick={() => handleNavItemClick("/About")} className="navbar-link">Hakkımızda</p>
                 <p onClick={() => handleNavItemClick("/Contact")} className="navbar-link">İletişim</p>
-
-                <div className="nav-item">
-                    <p style={{ marginTop: '100px' }} className="navbar-link" onClick={toggleDropdown}>
-                        Admin
-                    </p>
-                    {dropdownOpen && (
-                        <div className="dropdown-menu">
-                            <a
-                                className="dropdown-item"
-                                onClick={() => handleNavItemClick("/Admin-Product")}
-                            >
-                                Ürün Yönetim
-                            </a>
-                            <a
-                                className="dropdown-item"
-                                onClick={() => handleCategoryClick('Kategori2')}
-                            >
-                                Kullanıcı Yönetim
-                            </a>
-                            <a
-                                className="dropdown-item"
-                                href="#!"
-                                onClick={() => handleCategoryClick('Kategori3')}
-                            >
-                                Destek Talepleri
-                            </a>
-                            <a
-                                className="dropdown-item"
-                                href="#!"
-                                onClick={() => handleCategoryClick('Kategori4')}
-                            >
-                                Sipariş Yönetim
-                            </a>
-                        </div>
-                    )}
-                </div>
-
+                {!isMobile && (
+                    <div className="nav-item">
+                        <p className="navbar-link" onClick={toggleDropdown}>
+                            Admin
+                        </p>
+                        {dropdownOpen && (
+                            <div className="dropdown-menu">
+                                <a
+                                    className="dropdown-item"
+                                    onClick={() => handleNavItemClick("/Admin-Product")}
+                                >
+                                    Ürün Yönetim
+                                </a>
+                                <a
+                                    className="dropdown-item"
+                                    onClick={() => handleCategoryClick('Kategori2')}
+                                >
+                                    Kullanıcı Yönetim
+                                </a>
+                                <a
+                                    className="dropdown-item"
+                                    href="#!"
+                                    onClick={() => handleCategoryClick('Kategori3')}
+                                >
+                                    Destek Talepleri
+                                </a>
+                                <a
+                                    className="dropdown-item"
+                                    href="#!"
+                                    onClick={() => handleCategoryClick('Kategori4')}
+                                >
+                                    Sipariş Yönetim
+                                </a>
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
             <Dialog
                 open={openLogin}

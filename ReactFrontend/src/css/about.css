@@ -10,7 +10,7 @@
 
 .about-page-title {
     background:
-        url("./src/images/products.png");
+        url("https://andaccolakbucket.s3.eu-north-1.amazonaws.com/images/products.png");
     background-size: cover;
     background-repeat: no-repeat;
     user-select: none;
@@ -140,4 +140,121 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    .about-page {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .about-page-title {
+        font-size: 32px;
+        height: 100px;
+        margin-top: 50px;
+        width: 100%;
+        background-position: center;
+    }
+
+    .about-us {
+        width: 95%;
+        height: auto;
+        min-height: 300px;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .our-goal {
+        width: 95%;
+        height: auto;
+        min-height: 300px;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .icon-container {
+        width: 95%;
+        height: auto;
+        min-height: 400px;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .icon-item {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        font-size: 40px;
+        width: 80px;
+        height: 70px;
+        margin-top: 15px;
+    }
+
+    .icon-text {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .goal {
+        width: 95%;
+        height: auto;
+        min-height: 300px;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .about-us-title h1,
+    .goal-title h1 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .about-us-text,
+    .goal-text {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* Tablet görünümü için */
+@media (min-width: 481px) and (max-width: 768px) {
+    .about-page {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .about-page-title {
+        font-size: 50px;
+        height: 150px;
+    }
+
+    .icon-container {
+        width: 95%;
+        height: auto;
+        min-height: 200px;
+        padding: 20px;
+    }
+
+    .icon {
+        font-size: 50px;
+        width: 100px;
+        height: 80px;
+    }
+
+    .icon-text {
+        font-size: 16px;
+    }
+
+    .about-us-text,
+    .goal-text {
+        font-size: 16px;
+    }
 }

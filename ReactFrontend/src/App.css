@@ -1,22 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin-top: 200px;
   padding: 0;
   background-color: #ffffff;
-  background-image: url("./images/aa.png");
+  background-image: url("https://andaccolakbucket.s3.eu-north-1.amazonaws.com/images/aa.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
   background-position: 100% 0;
   position: relative;
-
+  width: 100%;
+  overflow-x: hidden;
 }
-
 
 .flex-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.drawer {
+  width: 100%;
 }
 
 .flex-column {
@@ -31,4 +41,105 @@ p {
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
   color: #7e82b5;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 150px;
+  }
+
+  .flex-row {
+    flex-wrap: wrap;
+  }
+}
+
+.continue-shopping-btn {
+
+  width: 100%;
+
+  padding: 12px;
+
+  background-color: #7e82b5;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  margin-top: auto;
+
+  transition: background-color 0.3s ease;
+
+}
+
+
+
+.continue-shopping-btn:hover {
+
+  background-color: #5e60a3;
+
+}
+
+.continue-shopping-btn {
+
+  width: 100%;
+
+  padding: 12px;
+
+  background-color: #7e82b5;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  margin-top: auto;
+
+  transition: background-color 0.3s ease;
+
+}
+
+
+
+.continue-shopping-btn:hover {
+
+  background-color: #5e60a3;
+
+}
+
+
+@media (max-width: 480px) {
+  body {
+    margin-top: 120px;
+    width: 100vw;
+  }
+
+  .flex-row {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
 }

@@ -13,6 +13,13 @@
   margin: 30px;
 }
 
+.cards-page {
+  width: 250px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 30px;
+}
+
 .product-list-container {
   width: 100%;
   display: flex;
@@ -78,7 +85,8 @@
   background-color: #4d4e51;
   color: white;
   border: none;
-  margin: 20px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -135,6 +143,7 @@
   user-select: none;
   max-width: 1500px;
   margin-left: auto;
+  margin-top: 15px;
   margin-right: auto;
   flex-wrap: wrap;
   display: flex;
@@ -188,7 +197,8 @@
 
 .product-page-title {
   background:
-    url("./src/images/products.png");
+    url("https://andaccolakbucket.s3.eu-north-1.amazonaws.com/Images/products.png");
+
   background-size: cover;
   background-repeat: no-repeat;
   user-select: none;
@@ -283,4 +293,218 @@
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .cards {
+    width: 200px;
+    height: 400px;
+    margin: 15px;
+  }
+
+  .image {
+    height: 250px;
+  }
+
+  .product-list-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    width: 100%;
+    max-width: 430px;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .flex-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  .cards {
+    width: 40%;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .cards-page {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-page {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    width: 100%;
+    height: 120px;
+    padding: 3px;
+    object-fit: contain;
+  }
+
+  .cards p {
+    font-size: 12px;
+    margin: 5px 0;
+    text-align: center;
+    height: 32px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .cards-page p {
+    font-size: 12px;
+    margin: 5px 0;
+    text-align: center;
+    height: 32px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .cards-price {
+    font-size: 0.8em;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .details-button {
+    padding: 6px 10px;
+    font-size: 11px;
+    width: 30%;
+    margin: 5px auto;
+    display: block;
+  }
+
+  .product-list-heading {
+    font-size: 16px;
+    top: -25px;
+    padding: 8px 15px;
+  }
+
+  /* Ürün kartlarının container'ı için */
+  .flex-row {
+    gap: 5px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .flex-row-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 5px;
+    width: 100%;
+  }
+
+  .products {
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .products-card {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    padding: 3px;
+  }
+
+  .products-card p {
+    font-size: 12px;
+    margin: 5px 0;
+    text-align: center;
+    height: 32px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .products-card .cards-price {
+    font-size: 0.8em;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .products-card .details-button {
+    width: 31%;
+    padding: 6px 10px;
+    font-size: 20px;
+    margin: 5px auto;
+    display: block;
+  }
+
+  .flex-row-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .product-list {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+}
+
+/* Küçük tabletler için ara boyut */
+@media (min-width: 481px) and (max-width: 768px) {
+  .flex-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
 }

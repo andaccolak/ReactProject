@@ -98,7 +98,17 @@ function App() {
             <p style={{ margin: '50px', color: 'black', fontSize: '25px' }}>Sepetiniz boş</p>
           )}
         </div>
+        <button
 
+          className="continue-shopping-btn"
+
+          onClick={() => dispatch(setDrawer())}
+
+        >
+
+          Alışverişe Devam Et
+
+        </button>
       </Drawer >
       <Footer />
       {/* </PageContainer> */}
@@ -129,5 +139,9 @@ function App() {
 
   )
 }
+
+
+
+
 
 export default App

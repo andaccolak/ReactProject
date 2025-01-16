@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\presentation\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|solutionrelative:presentation\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\infastructure\\persistence\\migrations\\20241224140708_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|solutionrelative:infastructure\\persistence\\migrations\\20241224140708_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\infastructure\\persistence\\migrations\\20250115130018_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|solutionrelative:infastructure\\persistence\\migrations\\20250115130018_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\infastructure\\persistence\\context\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78BFA870-9623-48EF-869A-3C61892A0017}|Infastructure\\Persistence\\Persistence.csproj|solutionrelative:infastructure\\persistence\\context\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\presentation\\api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|solutionrelative:presentation\\api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|solutionrelative:core\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\domain\\entities\\paymentrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|solutionrelative:core\\domain\\entities\\paymentrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|solutionrelative:core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\presentation\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B54A24AA-299A-44DB-9947-244DA4F9DD62}|Presentation\\Api\\Api.csproj|solutionrelative:presentation\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\features\\cqrs\\handlers\\producthandlers\\createproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}|Core\\Application\\Application.csproj|solutionrelative:core\\application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|c:\\users\\colak\\desktop\\front\\dotnetbackend\\icredibleprojectbackend\\core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E11D5619-4201-4A84-87D5-55E9B9123038}|Core\\Domain\\Domain.csproj|solutionrelative:core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,37 +62,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20241224140708_mig1.cs",
-              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Migrations\\20241224140708_mig1.cs",
-              "RelativeDocumentMoniker": "Infastructure\\Persistence\\Migrations\\20241224140708_mig1.cs",
-              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Migrations\\20241224140708_mig1.cs",
-              "RelativeToolTip": "Infastructure\\Persistence\\Migrations\\20241224140708_mig1.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAQwEQAAABCAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20250115130018_mig1.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Migrations\\20250115130018_mig1.cs",
+              "RelativeDocumentMoniker": "Infastructure\\Persistence\\Migrations\\20250115130018_mig1.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Migrations\\20250115130018_mig1.cs",
+              "RelativeToolTip": "Infastructure\\Persistence\\Migrations\\20250115130018_mig1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:02:30.551Z",
+              "WhenOpened": "2025-01-15T13:00:18.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Core\\Domain\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "Core\\Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T11:21:14.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Domain\\Entities\\PaymentRequestModel.cs",
+              "RelativeDocumentMoniker": "Core\\Domain\\Entities\\PaymentRequestModel.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Domain\\Entities\\PaymentRequestModel.cs",
+              "RelativeToolTip": "Core\\Domain\\Entities\\PaymentRequestModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T11:13:49.057Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Api\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "Presentation\\Api\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T11:03:45.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "DatabaseContext.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Context\\DatabaseContext.cs",
               "RelativeDocumentMoniker": "Infastructure\\Persistence\\Context\\DatabaseContext.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Context\\DatabaseContext.cs",
               "RelativeToolTip": "Infastructure\\Persistence\\Context\\DatabaseContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:51:03.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:51:03.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Presentation\\Api\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Presentation\\Api\\Controllers\\ProductsController.cs",
@@ -88,64 +135,59 @@
               "RelativeToolTip": "Presentation\\Api\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAQwCgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:49:03.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:49:03.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CreateProductCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\CreateProductCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\CreateProductCommandHandler.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\CreateProductCommandHandler.cs",
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\ProductHandlers\\CreateProductCommandHandler.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBcAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAzwBcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:48:45.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:48:45.607Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "UpdateCategoryCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\UpdateCategoryCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\UpdateCategoryCommandHandler.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\UpdateCategoryCommandHandler.cs",
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Handlers\\CategoryHandlers\\UpdateCategoryCommandHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:48:29.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:48:29.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "UpdateProductCommand.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
               "RelativeDocumentMoniker": "Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
               "RelativeToolTip": "Core\\Application\\Features\\CQRS\\Commands\\ProductCommands\\UpdateProductCommand.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:48:22.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:48:22.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
               "RelativeToolTip": "Infastructure\\Persistence\\Repositories\\ProductRepository\\ProductRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:47:49.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:47:49.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Interfaces\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Core\\Application\\Interfaces\\IProductRepository.cs",
@@ -153,12 +195,11 @@
               "RelativeToolTip": "Core\\Application\\Interfaces\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:46:35.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:46:35.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Application\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "Core\\Application\\Interfaces\\IRepository.cs",
@@ -166,21 +207,19 @@
               "RelativeToolTip": "Core\\Application\\Interfaces\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:46:12.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:46:12.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Domain\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Core\\Domain\\Entities\\Product.cs",
               "ToolTip": "C:\\Users\\colak\\Desktop\\Front\\DotnetBackend\\IcredibleProjectBackend\\Core\\Domain\\Entities\\Product.cs",
               "RelativeToolTip": "Core\\Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:45:50.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:45:50.018Z"
             }
           ]
         }

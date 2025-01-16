@@ -83,3 +83,127 @@
 .detail-button:hover {
     background-color: #0056b3;
 }
+
+.loading-placeholder {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+    .product-slider-container {
+        width: 95%;
+        margin: 30px auto;
+        padding: 10px;
+        height: 350px;
+    }
+
+    .product-slider-heading {
+        font-size: 18px;
+        top: -30px;
+        padding: 8px 15px;
+    }
+
+    .slider {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card {
+        height: 280px;
+        min-width: 150px;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .detail-button {
+        width: 31%;
+        margin: 0 auto;
+        padding: 8px 0;
+        font-size: 20px;
+    }
+
+    .card img {
+        height: 150px;
+        max-width: 150px;
+        max-height: 150px;
+        margin-top: -10px;
+        margin: 0 auto;
+    }
+
+    .card p {
+        font-size: 12px;
+        margin: 5px 0;
+        height: 30px;
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+    }
+
+    .card-price {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .detail-button {
+        padding: 6px 12px;
+        font-size: 11px;
+        height: 25px;
+        margin-top: 5px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    /* Slider kontrolleri için */
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+
+    .slick-dots {
+        bottom: -25px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 8px;
+        color: white;
+    }
+}
+
+/* Tablet görünümü için */
+@media (max-width: 768px) {
+    .product-slider-container {
+        width: 95%;
+        margin: 40px auto;
+        height: 400px;
+    }
+
+    .card {
+        height: 320px;
+        min-width: 180px;
+    }
+
+    .card img {
+        height: 180px;
+        max-width: 180px;
+        max-height: 180px;
+    }
+}

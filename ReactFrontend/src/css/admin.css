@@ -374,3 +374,156 @@
 .delete-button:hover {
     background-color: #b02a37;
 }
+
+@media (max-width: 480px) {
+    .product-cards-wrapper {
+        padding: 5px;
+        margin: 0;
+    }
+
+    .infos {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .images {
+        width: 80%;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .images img {
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    .title {
+        width: 100%;
+        height: auto;
+        min-height: 40px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .price,
+    .quantity,
+    .sales {
+        width: 80%;
+        height: 40px;
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .button-delete,
+    .button-update {
+        width: 100%;
+        height: 35px;
+        font-size: 15px;
+        margin: 5px auto;
+    }
+
+    .list {
+        display: none;
+        /* Mobilde başlık satırını gizle */
+    }
+
+    .admin-page-title {
+        font-size: 24px !important;
+        margin-left: 10px;
+    }
+
+    .admin-page-title-div {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .add-product-form {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .update-form {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .update-form input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Kategori yönetimi için mobil stiller */
+    .admin-category-container {
+        padding: 10px;
+    }
+
+    .add-category-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .category-input {
+        width: 100%;
+    }
+
+    .category-item {
+        width: 95%;
+        padding: 8px;
+        margin: 5px auto;
+    }
+
+    .category-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    /* Admin panel layout düzenlemesi */
+    div[style*="display: flex"] {
+        flex-direction: column !important;
+    }
+
+    div[style*="width: 350px"] {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .admin-products {
+        width: 100% !important;
+        margin: 10px 0 !important;
+    }
+}
+
+/* Tablet görünümü için */
+@media (min-width: 481px) and (max-width: 768px) {
+    .infos {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+
+    .images {
+        width: 60%;
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    .price,
+    .quantity,
+    .sales {
+        width: 30%;
+    }
+
+    .admin-page-title {
+        font-size: 32px !important;
+    }
+
+    .admin-products {
+        width: 95% !important;
+    }
+}
