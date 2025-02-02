@@ -109,7 +109,7 @@ function Header() {
                 <img
                     onClick={() => handleNavItemClick("/")}
                     className="logo"
-                    src="../src/Images/key-tedarik-logo.svg"
+                    src="https://keytedarik.com/images/key-tedarik-logo.svg"
                     alt="logo"
                 />
 
@@ -136,43 +136,34 @@ function Header() {
                 <p onClick={() => handleNavItemClick("/products")} className="navbar-link">Ürünler</p>
                 <p onClick={() => handleNavItemClick("/About")} className="navbar-link">Hakkımızda</p>
                 <p onClick={() => handleNavItemClick("/Contact")} className="navbar-link">İletişim</p>
-                {!isMobile && (
-                    <div className="nav-item">
-                        <p className="navbar-link" onClick={toggleDropdown}>
-                            Admin
-                        </p>
-                        {dropdownOpen && (
-                            <div className="dropdown-menu">
-                                <a
-                                    className="dropdown-item"
-                                    onClick={() => handleNavItemClick("/Admin-Product")}
-                                >
-                                    Ürün Yönetim
-                                </a>
-                                <a
-                                    className="dropdown-item"
-                                    onClick={() => handleCategoryClick('Kategori2')}
-                                >
-                                    Kullanıcı Yönetim
-                                </a>
-                                <a
-                                    className="dropdown-item"
-                                    href="#!"
-                                    onClick={() => handleCategoryClick('Kategori3')}
-                                >
-                                    Destek Talepleri
-                                </a>
-                                <a
-                                    className="dropdown-item"
-                                    href="#!"
-                                    onClick={() => handleCategoryClick('Kategori4')}
-                                >
-                                    Sipariş Yönetim
-                                </a>
-                            </div>
-                        )}
+
+                <div className="nav-item">
+                    <p className={`navbar-link ${dropdownOpen ? 'active' : ''}`} onClick={toggleDropdown}>
+                        Admin
+                    </p>
+                    <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+                        <a
+                            className="dropdown-item"
+                            onClick={() => {
+                                handleNavItemClick("/Admin-Product");
+                                setDropdownOpen(false);
+                            }}
+                        >
+                            Ürün Yönetim
+                        </a>
+                        <a
+                            className="dropdown-item"
+                            onClick={() => {
+                                handleNavItemClick("/Admin-User");
+                                setDropdownOpen(false);
+                            }}
+                        >
+                            Kullanıcı Yönetim
+                        </a>
                     </div>
-                )}
+                </div>
+
+
             </div>
             <Dialog
                 open={openLogin}

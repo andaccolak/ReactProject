@@ -23,7 +23,6 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
             var values = await _repository.GetByIdAsync(command.ProductID);
             values.Description = command.Description;
             values.Image = command.Image;
-            values.Price = command.Price;
             values.ProductName = command.ProductName;
             values.CategoryID = command.CategoryID;
             values.CategoryName = command.CategoryName;
@@ -31,6 +30,12 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
             values.SalesType = command.SalesType;
             values.Sales = command.Sales;
             values.Quantity = command.Quantity;
+            values.Gram = command.Gram;
+            values.paketIciAdet = command.paketIciAdet;
+            values.KoliIciAdet = command.KoliIciAdet;
+            values.AdetFiyat = command.AdetFiyat;
+            values.BarkodNo = command.BarkodNo;
+
             await _repository.UpdateAsync(values);
         }
     }

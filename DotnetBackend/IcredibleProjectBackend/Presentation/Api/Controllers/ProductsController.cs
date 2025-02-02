@@ -39,13 +39,24 @@ public class ProductsController : ControllerBase
         var values = await _getProductQueryHandler.Handle();
         return Ok(values);
     }
-
+    [HttpGet]
+    public IActionResult Default()
+    {
+        return Ok("API çalışıyor. Lütfen doğru endpoint kullanın.");
+    }
     [HttpGet("{id}")]
     public async Task<IActionResult> GetProduct(int id)
     {
         var value = await _getProductByIdQueryHandler.Handle(new GetProductByIdQuery(id));
+
+        if (value == null)
+        {
+            return NotFound("Ürün bulunamadı.");
+        }
+
         return Ok(value);
     }
+
 
     [HttpPost]
     public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
@@ -91,7 +102,7 @@ public class ProductsController : ControllerBase
         }
 
         var fileName = System.IO.Path.GetFileName(file.FileName);
-        
+
 
         var fileUrl = $"../src/Images/{fileName}";
         return Ok(new { url = fileUrl });
@@ -99,3 +110,5 @@ public class ProductsController : ControllerBase
 }
 //  ../src/Images/product-2.jpg
 //   C:/Users/colak/Desktop/Front/ReactFrontend/src/Images/bg-3.jpg
+
+

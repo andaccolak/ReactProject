@@ -1,0 +1,13 @@
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\bin\Release\net8.0\Domain.deps.json
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\bin\Release\net8.0\Domain.dll
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\bin\Release\net8.0\Domain.pdb
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.AssemblyInfo.cs
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.sourcelink.json
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.dll
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\refint\Domain.dll
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.pdb
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\ref\Domain.dll
+C:\Users\colak\Desktop\Front\DotnetBackend\IcredibleProjectBackend\Core\Domain\obj\Release\net8.0\Domain.csproj.AssemblyReference.cache

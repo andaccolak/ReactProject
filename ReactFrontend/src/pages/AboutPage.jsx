@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/about.css';
+import '../css/pages.css';
 import { FaShippingFast } from "react-icons/fa";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { RiRefund2Line } from "react-icons/ri";

@@ -5,17 +5,21 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{079BC66F-9815-42CD-80D7-ADADE5555009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Core\Domain\Domain.csproj", "{E11D5619-4201-4A84-87D5-55E9B9123038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Core\Domain\Domain.csproj", "{E11D5619-4201-4A84-87D5-55E9B9123038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Core\Application\Application.csproj", "{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Core\Application\Application.csproj", "{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infastructure", "Infastructure", "{B8BF136D-34CB-4F26-82C5-FEFFCE9442FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Infastructure\Persistence\Persistence.csproj", "{78BFA870-9623-48EF-869A-3C61892A0017}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Infastructure\Persistence\Persistence.csproj", "{78BFA870-9623-48EF-869A-3C61892A0017}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{DD778246-1C09-4F85-85D3-97764DB03716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Presentation\Api\Api.csproj", "{B54A24AA-299A-44DB-9947-244DA4F9DD62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Presentation\Api\Api.csproj", "{B54A24AA-299A-44DB-9947-244DA4F9DD62}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C} = {CD0DBBA8-5768-4B16-8C4A-4DE9D7DD079C}
+		{E11D5619-4201-4A84-87D5-55E9B9123038} = {E11D5619-4201-4A84-87D5-55E9B9123038}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

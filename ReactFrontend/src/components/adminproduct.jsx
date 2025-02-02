@@ -4,38 +4,23 @@ import '../app.css';
 
 function adminproduct({ product, onDeleteSuccess }) {
     const {
-        productID,
-        productName,
-        price,
-        description,
-        image,
-        categoryId,
-        categoryName,
-        brand,
-        salesType,
-        quantity,
-        sales
+        productID, productName, description, image, categoryID, categoryName, brand, salesType, sales, quantity, gram, paketIciAdet, koliIciAdet, adetFiyat, barkodNo
     } = product;
 
     const [isEditing, setIsEditing] = useState(false);
     const [updatedProduct, setUpdatedProduct] = useState({
-        productName,
-        price,
-        description,
-        image,
-        categoryId,
-        categoryName,
-        brand,
-        salesType,
-        sales,
-        quantity
+        productID, productName, description, image, categoryID, categoryName, brand, salesType, sales, quantity, gram, paketIciAdet, koliIciAdet, adetFiyat, barkodNo
     });
 
     const handleDelete = async () => {
+        console.log(`Silinecek ürün ID'si: ${productID}`); // Ürün ID'sini konsola yazdırır.
+        console.log(`Silinecek ürün url'si: https://colakandac.com.tr/api/Products/${productID}`); // Ürün ID'sini konsola yazdırır.
+
+
         const confirmDelete = window.confirm(`${productName} adlı ürünü silmek istediğinize emin misiniz?`);
         if (confirmDelete) {
             try {
-                const response = await fetch(`https://localhost:7240/api/Products/${productID}`, {
+                const response = await fetch(`https://colakandac.com.tr/api/Products/${productID}`, {
                     method: 'DELETE',
                 });
                 if (response.ok) {
@@ -55,8 +40,11 @@ function adminproduct({ product, onDeleteSuccess }) {
     };
 
     const handleUpdate = async () => {
+        console.log(`güncellenecek ürün ID'si: ${productID}`); // Ürün ID'sini konsola yazdırır.
+        console.log(`güncellenecek ürün url'si: https://colakandac.com.tr/api/Products/${productID}`); // Ürün ID'sini konsola yazdırır.
+
         try {
-            const response = await fetch(`https://localhost:7240/api/Products`, {
+            const response = await fetch(`https://colakandac.com.tr/api/Products`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -95,8 +83,8 @@ function adminproduct({ product, onDeleteSuccess }) {
                     <div className="images">
                         <img src={image} alt={productName} />
                     </div>
-                    <div className="title">{productName}</div>
-                    <div className="price">{price}₺</div>
+                    <div className="title">{productName} {productID}</div>
+                    <div className="adetFiyat">{adetFiyat}₺</div>
                     <div className="quantity">{quantity}</div>
                     <div className="sales">{sales}</div>
                     <div>
@@ -119,8 +107,8 @@ function adminproduct({ product, onDeleteSuccess }) {
                     />
                     <input
                         type="number"
-                        name="price"
-                        value={updatedProduct.price}
+                        name="adetFiyat"
+                        value={updatedProduct.adetFiyat}
                         onChange={handleChange}
                         placeholder="Fiyat"
                     />

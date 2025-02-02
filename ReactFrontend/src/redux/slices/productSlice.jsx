@@ -8,7 +8,7 @@ const initialState = {
     loading: false,
 };
 
-const BASE_URL = "https://localhost:7240/api";
+const BASE_URL = "https://colakandac.com.tr/api";
 
 export const getAllProduct = createAsyncThunk("getAllProduct", async () => {
     const response = await axios.get(`${BASE_URL}/products/list`).catch((error) => {

@@ -34,7 +34,7 @@ const ProductDetail = () => {
 
   const getProductById = async () => {
     try {
-      const response = await fetch(`https://localhost:7240/api/products/${id}`);
+      const response = await fetch(`https://colakandac.com.tr/api/products/${id}`);
       const data = await response.json();
       setSelectedProduct(data);
     } catch (error) {
@@ -43,10 +43,10 @@ const ProductDetail = () => {
   };
 
   const addBasket = () => {
-    const { productID, price, image, productName } = selectedProduct;
+    const { productID, adetFiyat, image, productName } = selectedProduct;
     const payload = {
       productID,
-      price,
+      adetFiyat,
       image,
       productName,
       count: 1,
@@ -63,7 +63,7 @@ const ProductDetail = () => {
     setIsVisible(true);
   }, [basketProduct]);
 
-  if (!selectedProduct) return <div>Loading...</div>;
+  if (!selectedProduct) return <div className="loading">Loading...</div>;
 
   return (
     <div className="product-detail-page">
@@ -77,42 +77,54 @@ const ProductDetail = () => {
         </div>
 
         <div className="product-info">
-          <div
-            className="product-header"
-            style={{ justifyContent: 'space-between' }}
-          >
-            <div className="product-title">{selectedProduct.productName}</div>
-            <div style={{ fontSize: '25px' }} className="product-price">
-              {selectedProduct.price}₺
-            </div>
+          <div className="product-header">
+            <h2 className="product-title">{selectedProduct.productName}</h2>
+            <div className="product-adetFiyat">{selectedProduct.adetFiyat}₺</div>
           </div>
-          <div className="product-description">{selectedProduct.description}</div>
+
+          <p className="product-description">
+            {selectedProduct.description}
+          </p>
+
           <div className="detail-counter">
             <button onClick={addBasket} className="add-to-cart-button">
               Sepete Ekle
-              <BsBasket style={{ marginLeft: '10px' }} />
+              <BsBasket className="basket-icon" style={{ marginLeft: '5px' }} />
             </button>
+
             <div
               className="plus-minus"
               style={{
                 visibility: count > 0 ? 'visible' : 'hidden',
-                display: 'flex',
-                alignItems: 'center',
               }}
             >
-              <CiCircleMinus onClick={decrement} className="counter-icon" />
-              <p
-                style={{
-                  fontSize: '30px',
-                  margin: '10px',
-                  userSelect: 'none',
-                  color: 'white',
-                }}
-              >
-                {count}
-              </p>
-              <CiCirclePlus onClick={increment} className="counter-icon" />
+              <CiCircleMinus className="counter-icon" onClick={decrement} />
+              <span className="counter-value">{count}</span>
+              <CiCirclePlus className="counter-icon" onClick={increment} />
             </div>
+          </div>
+
+          <div className="adetFiyat-table-wrapper">
+            <table className="adetFiyat-table">
+              <thead>
+                <tr>
+                  <th>Koli Fiyatı</th>
+                  <th>Koli Adedi</th>
+                  <th>Kutu Fiyatı</th>
+                  <th>Kutu Adedi</th>
+                  <th>Tekli Fiyat</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5₺</td>
+                  <td>5 adet</td>
+                  <td>5₺</td>
+                  <td>10 adet</td>
+                  <td>10₺</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

@@ -56,7 +56,7 @@ function SimilarProducts({ categoryId }) {
         const fetchSimilarProducts = async () => {
             try {
                 setIsLoading(true);
-                const response = await axios.get(`https://localhost:7240/api/Products/GetSimilarProducts/${categoryId}`);
+                const response = await axios.get(`https://colakandac.com.tr/api/Products/GetSimilarProducts/${categoryId}`);
                 if (mounted) {
                     setCards(response.data);
                     setIsLoading(false);
@@ -111,13 +111,20 @@ function SimilarProducts({ categoryId }) {
             <h1 className="product-slider-heading" style={{ fontFamily: 'arial' }}>Benzer Ürünlerimiz</h1>
             <Slider {...settings} className='slider'>
                 {cards.map((card) => {
+
                     const shortTitle = card.productName.split(' ').slice(0, 3).join(' ');
                     return (
                         <Card key={card.productID} className='card'>
+                            {/* İndirim etiketi */}
+                            {card.discount > 0 && (
+                                <div className="discount-badge">
+                                    %{card.discount}
+                                </div>
+                            )}
                             <img className='image' src={card.image} alt={card.productName} />
                             <div>
                                 <p style={{ margin: '-5px', color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '15px' }}>{shortTitle}</p>
-                                <h3 className='card-price'>{card.price} ₺</h3>
+                                <h3 className='card-adetFiyat'>{card.adetFiyat} ₺</h3>
                             </div>
                             <div className='flex-row'>
                                 <button onClick={() => navigate("/product-detail/" + card.productID)} className='detail-button'>Ürünü İncele</button>

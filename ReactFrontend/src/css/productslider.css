@@ -3,7 +3,8 @@
     padding: 20px;
     background-color: #4a4ab2f9;
     border-radius: 10px;
-    width: 1400px;
+    width: 1500px;
+    max-width: 1500px;
     text-align: center;
     position: relative;
     height: 500px;
@@ -38,6 +39,9 @@
     margin: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid black;
+    transform: translateY(-1px);
+
+
 }
 
 .card:hover {
@@ -61,7 +65,7 @@
 
 
 
-.card-price {
+.card-adetFiyat {
     font-size: 15px;
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
@@ -133,7 +137,7 @@
     }
 
     .detail-button {
-        width: 31%;
+        width: 35%;
         margin: 0 auto;
         padding: 8px 0;
         font-size: 20px;
@@ -156,7 +160,7 @@
         width: 100%;
     }
 
-    .card-price {
+    .card-adetFiyat {
         font-size: 14px;
         margin: 5px 0;
     }

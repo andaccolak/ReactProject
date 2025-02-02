@@ -74,6 +74,12 @@ namespace Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"));
 
+                    b.Property<double>("AdetFiyat")
+                        .HasColumnType("float");
+
+                    b.Property<int>("BarkodNo")
+                        .HasColumnType("int");
+
                     b.Property<string>("Brand")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -89,12 +95,15 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Gram")
+                        .HasColumnType("float");
+
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                    b.Property<int>("KoliIciAdet")
+                        .HasColumnType("int");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
@@ -109,6 +118,9 @@ namespace Persistence.Migrations
                     b.Property<string>("SalesType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("paketIciAdet")
+                        .HasColumnType("int");
 
                     b.HasKey("ProductID");
 

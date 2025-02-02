@@ -1,17 +1,18 @@
-import '../css/product.css';
-import Product from '../components/Product';
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAllProduct } from '../redux/slices/productSlice';
-import Category from '../components/Category';
-import ProductsPageList from '../components/productsPageList';
+// src/pages/ProductsPage.jsx
+import React from "react";
+import Category from "../components/Category";
+import ProductsPageList from "../components/ProductsPageList";
+import "../css/ProductPage.css"
 
 function ProductsPage() {
-
     return (
-        <div>
-            <Category />
-            <ProductsPageList />
+        <div className="products-page-container">
+            <div className="sidebar-category">
+                <Category />
+            </div>
+            <div className="products-content">
+                <ProductsPageList />
+            </div>
         </div>
     );
 }

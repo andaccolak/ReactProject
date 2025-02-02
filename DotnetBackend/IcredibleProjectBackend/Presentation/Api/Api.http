@@ -1,4 +1,7 @@
-@Api_HostAddress = http://localhost:5037
+# @Api_HostAddress = http://localhost:5037
+@Api_HostAddress = https://colakandac.com.tr
+
+
 
 GET {{Api_HostAddress}}/weatherforecast/
 Accept: application/json

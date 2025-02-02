@@ -25,15 +25,19 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
             {
                 ProductID = values.ProductID,
                 ProductName = values.ProductName,
-                Price = values.Price,
                 Description = values.Description,
                 Image = values.Image,
                 CategoryID = values.CategoryID,
                 CategoryName = values.CategoryName,
                 Brand = values.Brand,
                 Sales = values.Sales,
-                Quantity = values.Quantity
-    };
+                Quantity = values.Quantity,
+                Gram = values.Gram,
+                paketIciAdet = values.paketIciAdet,
+                KoliIciAdet = values.KoliIciAdet,
+                AdetFiyat = values.AdetFiyat,
+                BarkodNo = values.BarkodNo
+            };
 }
     }
 }

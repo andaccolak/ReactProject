@@ -1,5 +1,13 @@
 .image {
-  width: 91%;
+  width: 99%;
+  height: 300px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.brand-image {
+  width: 92%;
   height: 300px;
   padding: 12px;
   background-color: #fff;
@@ -44,8 +52,49 @@
 
 }
 
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4747;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  z-index: 2;
+  /* Resmin üstünde görünmesi için */
+}
 
-.cards-price {
+.Discount-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 10px;
+  border-radius: 8px;
+  object-fit: contain;
+
+}
+
+.Discount-title {
+  color: black;
+  text-align: center;
+  height: 20px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 35px;
+}
+
+.Discount-cards-adetFiyat {
+  text-align: center;
+  color: #000;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+
+.cards-adetFiyat {
   color: #000000;
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
@@ -311,6 +360,10 @@
     height: 250px;
   }
 
+  .brand-image {
+    height: 250px;
+  }
+
   .product-list-heading {
     font-size: 20px;
   }
@@ -375,6 +428,13 @@
     object-fit: contain;
   }
 
+  .brand-image {
+    width: 100%;
+    height: 120px;
+    padding: 3px;
+    object-fit: contain;
+  }
+
   .cards p {
     font-size: 12px;
     margin: 5px 0;
@@ -397,7 +457,7 @@
     -webkit-box-orient: vertical;
   }
 
-  .cards-price {
+  .cards-adetFiyat {
     font-size: 0.8em;
     margin: 5px 0;
     text-align: center;
@@ -470,7 +530,7 @@
     -webkit-box-orient: vertical;
   }
 
-  .products-card .cards-price {
+  .products-card .cards-adetFiyat {
     font-size: 0.8em;
     margin: 5px 0;
     text-align: center;
@@ -496,6 +556,13 @@
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    width: 35%;
+    margin: 0px 0;
   }
 }
 

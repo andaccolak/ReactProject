@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 class CategoryService {
-    BASE_URL = "https://localhost:7240/api";
+    BASE_URL = "https://colakandac.com.tr/api";
 
     // GET
     getAllCategories(): Promise<{ categoryID: string; categoryName: string }[]> {

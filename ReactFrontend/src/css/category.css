@@ -1,32 +1,72 @@
+/* src/css/category.css */
+
+/* Masaüstü için kategori listesi */
 .category-list {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px auto;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: #f8f9fa;
 }
 
 .category-button {
-    padding: 20px;
-    font-size: 20px;
-    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    /* Düğmelere hafif yuvarlatılmış köşeler */
+    background-color: #e0e0e0;
+    /* Düğme arka plan rengi */
+    color: #333;
+    /* Yazı rengi */
+    width: 100%;
+    font-size: 1rem;
     text-align: center;
-    border: 1px solid #ccc;
-    background-color: #3f3b67;
-    color: white;
-    width: 150px;
-    height: 60px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .category-button:hover {
-    background-color: #5a8683;
+    background-color: #d4d4d4;
+    /* Hover durumunda daha koyu renk */
 }
 
 .category-button.active {
-    background-color: #98c0e0;
-    color: white;
-    border-color: #a4a7d8;
+    background-color: #4caf50;
+    /* Seçili kategori için farklı renk */
+    color: #fff;
+}
+
+/* Mobilde normal listeyi gizle */
+@media screen and (max-width: 768px) {
+    .category-list {
+        display: none;
+    }
+}
+
+/* Mobilde dropdown alanı */
+.dropdown-category {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown-category {
+        display: block;
+        /* Mobilde dropdown görünür */
+        width: 100%;
+        padding: 1rem;
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .dropdown-select {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        cursor: pointer;
+    }
 }

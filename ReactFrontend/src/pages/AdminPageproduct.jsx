@@ -15,7 +15,7 @@ function AdminPageproduct() {
 
     const [newProduct, setNewProduct] = useState({
         productName: '',
-        price: '',
+        adetFiyat: '',
         description: '',
         image: '',
         categoryId: '',
@@ -24,6 +24,10 @@ function AdminPageproduct() {
         salesType: '',
         sales: '',
         quantity: '',
+        gram: '',
+        paketIciAdet: '',
+        koliIciAdet: '',
+        barkodNo: ''
     });
 
     const [errors, setErrors] = useState({});
@@ -80,7 +84,7 @@ function AdminPageproduct() {
             const formData = new FormData();
             formData.append("file", file);
 
-            const response = await fetch('https://localhost:7240/api/Products/upload', {
+            const response = await fetch('https://colakandac.com.tr/api/Products/upload', {
                 method: 'POST',
                 body: formData,
             });
@@ -101,25 +105,17 @@ function AdminPageproduct() {
 
     const validateForm = () => {
         const {
-            productName,
-            price,
-            description,
-            image,
-            categoryId,
-            categoryName,
-            brand,
-            salesType,
-            sales,
-            quantity,
+            productName, description, image, categoryID, categoryName, brand, salesType, sales, quantity, gram, paketIciAdet, koliIciAdet, adetFiyat, barkodNo
+
         } = newProduct;
 
         let formErrors = {};
 
         if (!productName.trim()) formErrors.productName = 'Ürün adı gerekli.';
-        if (!price) {
-            formErrors.price = 'Fiyat gerekli.';
-        } else if (isNaN(price) || parseFloat(price) <= 0) {
-            formErrors.price = 'Geçerli bir fiyat giriniz.';
+        if (!adetFiyat) {
+            formErrors.adetFiyat = 'Fiyat gerekli.';
+        } else if (isNaN(adetFiyat) || parseFloat(adetFiyat) <= 0) {
+            formErrors.adetFiyat = 'Geçerli bir fiyat giriniz.';
         }
         if (!description.trim()) formErrors.description = 'Açıklama gerekli.';
         if (!image.trim()) formErrors.image = 'Görsel gerekli.';
@@ -153,22 +149,28 @@ function AdminPageproduct() {
         }
 
         try {
-            const response = await fetch('https://localhost:7240/api/Products', {
+            const response = await fetch('https://colakandac.com.tr/api/Products', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
+                    productID: parseInt(newProduct.productID, 10),
                     productName: newProduct.productName,
-                    price: parseFloat(newProduct.price),
                     description: newProduct.description,
                     image: newProduct.image,
-                    categoryID: parseInt(newProduct.categoryId, 10),
+                    categoryID: parseInt(newProduct.categoryID, 10),
                     categoryName: newProduct.categoryName,
                     brand: newProduct.brand,
                     salesType: newProduct.salesType,
                     sales: parseInt(newProduct.sales, 10),
                     quantity: parseInt(newProduct.quantity, 10),
+                    gram: parseFloat(newProduct.gram),
+                    paketIciAdet: parseInt(newProduct.paketIciAdet, 10),
+                    koliIciAdet: parseInt(newProduct.koliIciAdet, 10),
+                    adetFiyat: parseFloat(newProduct.adetFiyat),
+                    barkodNo: newProduct.barkodNo
+
                 }),
             });
 
@@ -176,16 +178,8 @@ function AdminPageproduct() {
                 alert('Ürün başarıyla eklendi.');
                 setShowForm(false);
                 setNewProduct({
-                    productName: '',
-                    price: '',
-                    description: '',
-                    image: '',
-                    categoryId: '',
-                    categoryName: '',
-                    brand: '',
-                    salesType: '',
-                    sales: '',
-                    quantity: '',
+                    productID: '', productName: '', description: '', image: '', categoryID: '', categoryName: '', brand: '', salesType: '', sales: '', quantity: '', gram: '', paketIciAdet: '', koliIciAdet: '', adetFiyat: '', barkodNo: ''
+
                 });
                 setErrors({});
                 dispatch(getAllProduct());
@@ -272,12 +266,12 @@ function AdminPageproduct() {
                                 <label>Fiyat:<br /></label>
                                 <input
                                     type="number"
-                                    name="price"
-                                    value={newProduct.price}
+                                    name="adetFiyat"
+                                    value={newProduct.adetFiyat}
                                     onChange={handleInputChange}
                                     style={{ width: '80%', padding: '5px', margin: '5px 0' }}
                                 />
-                                {errors.price && <span className="error">{errors.price}</span>}
+                                {errors.adetFiyat && <span className="error">{errors.adetFiyat}</span>}
                             </div>
                             <div style={{ width: 'calc(50% - 10px)', minWidth: '200px' }}>
                                 <label>Açıklama:<br /></label>

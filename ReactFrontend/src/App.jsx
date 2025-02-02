@@ -65,7 +65,7 @@ function App() {
                     navigate(`/product-detail/${product.productID}`);
                   }} style={{ width: '320px', marginRight: '5px', color: 'black' }}>{product.productName} <br />
                     Adet : {product.count}</p>
-                  <p style={{ fontWeight: 'bold', marginRight: '10px', width: '60px' }}>{product.price}TL</p>
+                  <p style={{ fontWeight: 'bold', marginRight: '10px', width: '60px' }}>{product.adetFiyat}TL</p>
                   <button onClick={() => dispatch(removeProduct({ productID: product.productID }))} style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'rgb(185, 76, 76)', border: 'none', color: '#fff', width: '50px', cursor: 'pointer' }}>sil</button>
                 </div>
 

@@ -1,10 +1,12 @@
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Slider from "react-slick";
 import { Container, Card } from 'react-bootstrap';
 import '../css/productslider.css';
 import { useNavigate } from 'react-router-dom';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function Productslider() {
     const [cards, setCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -55,7 +57,7 @@ function Productslider() {
 
         const fetchBestSellingProducts = async () => {
             try {
-                const response = await axios.get('https://localhost:7240/api/Products/bestseller');
+                const response = await axios.get('https://colakandac.com.tr/api/Products/bestseller');
                 if (mounted) {
                     setCards(response.data);
                     setIsLoading(false);
@@ -108,13 +110,19 @@ function Productslider() {
             <h1 className="product-slider-heading">Çok Satanlar</h1>
             <Slider {...settings} className='slider'>
                 {cards.map((card) => {
+
                     const shortTitle = card.productName.split(' ').slice(0, 3).join(' ');
                     return (
                         <Card key={card.productID} className='card'>
+                            {card.discount > 0 && (
+                                <div className="discount-badge">
+                                    %{card.discount}
+                                </div>
+                            )}
                             <img className='image' src={card.image} alt={card.productName} />
                             <div>
                                 <p style={{ margin: '-5px', color: 'black', textAlign: 'center', height: '20px', fontFamily: 'Arial, sans-serif', fontSize: '15px' }}>{shortTitle}</p>
-                                <h3 className='card-price'>{card.price} ₺ </h3>
+                                <h3 className='card-adetFiyat'>{card.adetFiyat} ₺ </h3>
                             </div>
                             <div className='flex-row'>
                                 <button onClick={() => navigate("/product-detail/" + card.productID)} className='detail-button'>Ürünü İncele</button>

@@ -22,7 +22,6 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
             await _repository.CreateAsync(new Product
             {
                 ProductName = command.ProductName,
-                Price = command.Price,
                 Description = command.Description,
                 Image = command.Image,
                 CategoryID = command.CategoryID,
@@ -30,7 +29,15 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
                 Brand = command.Brand,
                 SalesType = command.SalesType,
                 Sales = command.Sales,
-                Quantity = command.Quantity
+                Quantity = command.Quantity,
+                Gram = command.Gram,
+                paketIciAdet = command.paketIciAdet,
+                KoliIciAdet = command.KoliIciAdet,
+                AdetFiyat = command.AdetFiyat,
+                BarkodNo = command.BarkodNo
+
+
+
             });
         }
     }

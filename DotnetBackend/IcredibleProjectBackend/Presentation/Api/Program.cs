@@ -48,6 +48,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
+
+}
+else
+{
+    app.UseExceptionHandler("/Error");
 }
 
 app.UseCors("AllowAll"); // Apply the CORS policy

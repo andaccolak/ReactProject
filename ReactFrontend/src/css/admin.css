@@ -33,7 +33,7 @@
     font-family: sans-serif;
 }
 
-.price {
+.adetFiyat {
     width: 30%;
     height: 50px;
     padding: 12px;
@@ -408,7 +408,7 @@
         padding: 8px;
     }
 
-    .price,
+    .adetFiyat,
     .quantity,
     .sales {
         width: 80%;
@@ -513,7 +513,7 @@
         width: 100%;
     }
 
-    .price,
+    .adetFiyat,
     .quantity,
     .sales {
         width: 30%;

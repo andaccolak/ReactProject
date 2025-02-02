@@ -24,7 +24,6 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
             {
                 ProductID = x.ProductID,
                 ProductName = x.ProductName,
-                Price = x.Price,
                 Description = x.Description,
                 Image = x.Image,
                 CategoryID = x.CategoryID,
@@ -32,7 +31,13 @@ namespace Application.Features.CQRS.Handlers.ProductHandlers
                 Brand = x.Brand,
                 SalesType = x.SalesType,
                 Sales = x.Sales,
-                Quantity = x.Quantity
+                Quantity = x.Quantity,
+                Gram = x.Gram,
+                paketIciAdet = x.paketIciAdet,
+                KoliIciAdet = x.KoliIciAdet,
+                AdetFiyat = x.AdetFiyat,
+                BarkodNo = x.BarkodNo
+
             }).ToList();
         }
     }
